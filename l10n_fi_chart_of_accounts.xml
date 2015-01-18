@@ -2107,6 +2107,7 @@
             <field name="type">receivable</field>
             <field name="user_type" ref="account_type_receivable"/>
             <field name="parent_id" ref="a160"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a161">
             <field name="name">Saamiset saman konsernin yrityksilt&#228;</field>
@@ -2128,6 +2129,7 @@
             <field name="type">receivable</field>
             <field name="user_type" ref="account_type_receivable"/>
             <field name="parent_id" ref="a161"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a163">
             <field name="name">Saamiset omistusyhteysyrityksilt&#228;</field>
@@ -2142,6 +2144,7 @@
             <field name="type">receivable</field>
             <field name="user_type" ref="account_type_receivable"/>
             <field name="parent_id" ref="a163"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a164">
             <field name="name">Lainasaamiset</field>
@@ -2156,6 +2159,7 @@
             <field name="type">receivable</field>
             <field name="user_type" ref="account_type_receivable"/>
             <field name="parent_id" ref="a164"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a16410">
             <field name="name">L&#228;hipiirilainasaamiset; pitk&#228;aikaiset</field>
@@ -2163,6 +2167,7 @@
             <field name="type">receivable</field>
             <field name="user_type" ref="account_type_receivable"/>
             <field name="parent_id" ref="a164"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a16411">
             <field name="name">Lis&#228;ykset</field>
@@ -2226,6 +2231,7 @@
             <field name="type">receivable</field>
             <field name="user_type" ref="account_type_receivable"/>
             <field name="parent_id" ref="a166"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a1661">
             <field name="name">Muut saamiset; pitk&#228;aikaiset; pantatut talletukset</field>
@@ -2233,6 +2239,7 @@
             <field name="type">receivable</field>
             <field name="user_type" ref="account_type_receivable"/>
             <field name="parent_id" ref="a166"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a167">
             <field name="name">Siirtosaamiset</field>
@@ -2247,6 +2254,7 @@
             <field name="type">receivable</field>
             <field name="user_type" ref="account_type_receivable"/>
             <field name="parent_id" ref="a167"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a1678">
             <field name="name">Siirtosaamiset; pitk&#228;aikaiset investoinneista</field>
@@ -2254,6 +2262,7 @@
             <field name="type">receivable</field>
             <field name="user_type" ref="account_type_receivable"/>
             <field name="parent_id" ref="a167"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a1679">
             <field name="name">Siirtosaamiset; pitk&#228;aikaiset rahoituksesta</field>
@@ -2261,6 +2270,7 @@
             <field name="type">receivable</field>
             <field name="user_type" ref="account_type_receivable"/>
             <field name="parent_id" ref="a167"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a17">
             <field name="name">Lyhytaikaiset saamiset</field>
@@ -2282,6 +2292,7 @@
             <field name="type">receivable</field>
             <field name="user_type" ref="account_type_receivable"/>
             <field name="parent_id" ref="a170"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a171">
             <field name="name">Saamiset saman konsernin yrityksilt&#228;</field>
@@ -2296,6 +2307,7 @@
             <field name="type">receivable</field>
             <field name="user_type" ref="account_type_receivable"/>
             <field name="parent_id" ref="a171"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a1711">
             <field name="name">Myyntisaamiset saman konsernin yrityksilt&#228;</field>
@@ -2303,6 +2315,7 @@
             <field name="type">receivable</field>
             <field name="user_type" ref="account_type_receivable"/>
             <field name="parent_id" ref="a171"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a173">
             <field name="name">Saamiset omistusyhteysyrityksilt&#228;</field>
@@ -2317,6 +2330,7 @@
             <field name="type">receivable</field>
             <field name="user_type" ref="account_type_receivable"/>
             <field name="parent_id" ref="a173"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a174">
             <field name="name">Lainasaamiset</field>
@@ -2331,6 +2345,7 @@
             <field name="type">receivable</field>
             <field name="user_type" ref="account_type_receivable"/>
             <field name="parent_id" ref="a174"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a17410">
             <field name="name">L&#228;hipiirilainasaamiset; lyhytaikaiset</field>
@@ -2338,6 +2353,7 @@
             <field name="type">receivable</field>
             <field name="user_type" ref="account_type_receivable"/>
             <field name="parent_id" ref="a174"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a17411">
             <field name="name">Lis&#228;ykset</field>
@@ -2359,6 +2375,7 @@
             <field name="type">receivable</field>
             <field name="user_type" ref="account_type_receivable"/>
             <field name="parent_id" ref="a174"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a17421">
             <field name="name">Lis&#228;ykset</field>
@@ -2408,6 +2425,7 @@
             <field name="type">receivable</field>
             <field name="user_type" ref="account_type_receivable"/>
             <field name="parent_id" ref="a176"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a1761">
             <field name="name">Verotilisaamiset</field>
@@ -2415,6 +2433,7 @@
             <field name="type">receivable</field>
             <field name="user_type" ref="account_type_receivable"/>
             <field name="parent_id" ref="a176"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a1762">
             <field name="name">Alv-saaminen</field>
@@ -2422,6 +2441,7 @@
             <field name="type">other</field>
             <field name="user_type" ref="account_type_receivable"/>
             <field name="parent_id" ref="a176"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a1763">
             <field name="name">Maksamattomat osakkeet ja osuudet</field>
@@ -2443,6 +2463,7 @@
             <field name="type">receivable</field>
             <field name="user_type" ref="account_type_receivable"/>
             <field name="parent_id" ref="a177"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a17710">
             <field name="name">Osatuloutussaamiset</field>
@@ -2450,6 +2471,7 @@
             <field name="type">receivable</field>
             <field name="user_type" ref="account_type_receivable"/>
             <field name="parent_id" ref="a177"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a17720">
             <field name="name">Kurssierot</field>
@@ -2464,6 +2486,7 @@
             <field name="type">receivable</field>
             <field name="user_type" ref="account_type_receivable"/>
             <field name="parent_id" ref="a177"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a17790">
             <field name="name">Siirtosaamiset rahoituksesta</field>
@@ -2471,6 +2494,7 @@
             <field name="type">receivable</field>
             <field name="user_type" ref="account_type_receivable"/>
             <field name="parent_id" ref="a177"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a18">
             <field name="name">Rahoitusarvopaperit</field>
@@ -3591,6 +3615,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2806"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a28061">
             <field name="name">Osamaksuvelat</field>
@@ -3598,6 +3623,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2806"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a28068">
             <field name="name">Siirto lyhytaikaisiin; ostovelat</field>
@@ -3605,6 +3631,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2806"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a28069">
             <field name="name">Siirto lyhytaikaisiin; osamaksuvelat</field>
@@ -3612,6 +3639,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2806"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a2807">
             <field name="name">Rahoitusvekselit</field>
@@ -3626,6 +3654,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2807"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a28079">
             <field name="name">Siirto lyhytaikaisiin</field>
@@ -3633,6 +3662,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2807"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a2808">
             <field name="name">Velat saman konsernin yrityksille</field>
@@ -3647,6 +3677,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2808"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a28081">
             <field name="name">Ostovelat saman konsernin yrityksille</field>
@@ -3654,6 +3685,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2808"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a28089">
             <field name="name">Siirto lyhytaikaisiin</field>
@@ -3661,6 +3693,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2808"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a2809">
             <field name="name">Velat omistusyhteysyrityksille</field>
@@ -3675,6 +3708,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2809"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a28099">
             <field name="name">Siirto lyhytaikaisiin</field>
@@ -3682,6 +3716,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2809"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a2810">
             <field name="name">Laskennalliset verovelat</field>
@@ -3696,6 +3731,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2810"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a2811">
             <field name="name">Muut velat</field>
@@ -3710,6 +3746,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2811"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a28112">
             <field name="name">Velat omistajille</field>
@@ -3717,6 +3754,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2811"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a28119">
             <field name="name">Siirto lyhytaikaisiin</field>
@@ -3724,6 +3762,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2811"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a2850">
             <field name="name">Siirtovelat</field>
@@ -3738,6 +3777,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2850"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a28509">
             <field name="name">Siirto lyhytaikaisiin liiketoiminnasta</field>
@@ -3745,6 +3785,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2850"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a28580">
             <field name="name">Siirtovelat pitk&#228;aikaiset investoinneista</field>
@@ -3752,6 +3793,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2850"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a28589">
             <field name="name">Siirto lyhytaikaisiin investoinneista</field>
@@ -3759,6 +3801,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2850"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a28590">
             <field name="name">Siirtovelat pitk&#228;aikaiset rahoituksesta</field>
@@ -3766,6 +3809,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2850"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a28599">
             <field name="name">Siirto lyhytaikaisiin rahoituksesta</field>
@@ -3773,6 +3817,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2850"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a29">
             <field name="name">Lyhytaikainen vieras p&#228;&#228;oma</field>
@@ -3794,6 +3839,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2900"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a29001">
             <field name="name">Maksetut lyhennykset</field>
@@ -3801,6 +3847,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2900"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a29009">
             <field name="name">Siirto pitk&#228;aikaisista</field>
@@ -3808,6 +3855,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2900"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a2901">
             <field name="name">Joukkovelkakirjalainat</field>
@@ -3822,6 +3870,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2901"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a29011">
             <field name="name">Maksetut lyhennykset</field>
@@ -3829,6 +3878,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2901"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a29019">
             <field name="name">Siirto pitk&#228;aikaisista</field>
@@ -3836,6 +3886,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2901"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a2902">
             <field name="name">Vaihtovelkakirjalainat</field>
@@ -3850,6 +3901,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2902"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a29021">
             <field name="name">Maksetut lyhennykset</field>
@@ -3857,6 +3909,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2902"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a29029">
             <field name="name">Siirto pitk&#228;aikaisista</field>
@@ -3864,6 +3917,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2902"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a2903">
             <field name="name">Lainat rahoituslaitoksilta</field>
@@ -3878,6 +3932,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2903"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a29031">
             <field name="name">Lainojen lyhennykset</field>
@@ -3885,6 +3940,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2903"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a29032">
             <field name="name">Osamaksuvelat; lyhytaikainen osuus</field>
@@ -3892,6 +3948,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2903"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a29033">
             <field name="name">Osamaksuvelkojen lyhennykset</field>
@@ -3899,6 +3956,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2903"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a2904">
             <field name="name">El&#228;kelainat</field>
@@ -3913,6 +3971,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2904"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a29041">
             <field name="name">El&#228;kelainojen lyhennykset</field>
@@ -3920,6 +3979,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2904"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a2905">
             <field name="name">Saadut ennakot</field>
@@ -3934,6 +3994,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2905"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a29051">
             <field name="name">Keskener&#228;isten t&#246;iden osuus saaduista ennakoista</field>
@@ -3941,6 +4002,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2905"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a2906">
             <field name="name">Ostovelat</field>
@@ -3955,6 +4017,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2906"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a29061">
             <field name="name">Osamaksuvelat</field>
@@ -3962,6 +4025,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2906"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a29062">
             <field name="name">Maksuliikennetili</field>
@@ -3969,6 +4033,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2906"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a2907">
             <field name="name">Rahoitusvekselit</field>
@@ -3983,6 +4048,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2907"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a2908">
             <field name="name">Velat saman konsernin yrityksille</field>
@@ -3997,6 +4063,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2908"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a29081">
             <field name="name">Ostovelat saman konsernin yrityksille</field>
@@ -4004,6 +4071,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2908"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a2909">
             <field name="name">Velat omistusyhteysyrityksille</field>
@@ -4018,6 +4086,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2909"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a2910">
             <field name="name">Laskennalliset verovelat</field>
@@ -4032,6 +4101,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2910"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a2911">
             <field name="name">Muut velat</field>
@@ -4046,6 +4116,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2911"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a291102">
             <field name="name">Ennakonpid&#228;tys yhteis&#246;ilt&#228;</field>
@@ -4053,6 +4124,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2911"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a291103">
             <field name="name">Ennakonpid&#228;tys koroista ja osingoista</field>
@@ -4060,6 +4132,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2911"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a291104">
             <field name="name">Ennakonpid&#228;tys osingoista ja osuuksista</field>
@@ -4067,6 +4140,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2911"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a291110">
             <field name="name">L&#228;hdeverovelka</field>
@@ -4074,6 +4148,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2911"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a291112">
             <field name="name">L&#228;hdevero osingoista</field>
@@ -4081,6 +4156,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2911"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a291113">
             <field name="name">L&#228;hdevero koroista, rojalteista (rajoitetusti verovelvollinen)</field>
@@ -4088,6 +4164,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2911"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a291114">
             <field name="name">L&#228;hdevero koroista (yleisesti verovelvollinen)</field>
@@ -4095,6 +4172,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2911"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a291120">
             <field name="name">Sosiaaliturvamaksuvelka</field>
@@ -4102,6 +4180,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2911"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a291130">
             <field name="name">J&#228;senmaksutilitysvelka</field>
@@ -4109,6 +4188,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2911"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a291140">
             <field name="name">Arvonlis&#228;verovelka</field>
@@ -4116,6 +4196,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2911"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a291141">
             <field name="name">24 Myynnin alv-velka</field>
@@ -4123,6 +4204,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2911"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a291142">
             <field name="name">14 Myynnin alv-velka</field>
@@ -4130,6 +4212,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2911"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a291143">
             <field name="name">10 Myynnin alv-velka</field>
@@ -4137,6 +4220,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2911"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a291145">
             <field name="name">Vero tavaraostoista muista EU-maista</field>
@@ -4144,6 +4228,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2911"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a291146">
             <field name="name">Vero palveluostoista muista EU-maista</field>
@@ -4151,6 +4236,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2911"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a291148">
             <field name="name">Vero rakentamispalvelun ostoista (k&#228;&#228;nnetty verovelvollisuus)</field>
@@ -4158,6 +4244,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2911"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a291151">
             <field name="name">V&#228;hennett&#228;v&#228; alv</field>
@@ -4165,6 +4252,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2911"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a291158">
             <field name="name">Muu 100 % v&#228;hennett&#228;v&#228; alv</field>
@@ -4172,6 +4260,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2911"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a291159">
             <field name="name">Tuonnin alv</field>
@@ -4179,6 +4268,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2911"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a291160">
             <field name="name">Verotilivelka</field>
@@ -4186,6 +4276,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2911"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a291161">
             <field name="name">Verotililt&#228; perint&#228;&#228;n siirretyt velat</field>
@@ -4193,6 +4284,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2911"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a291170">
             <field name="name">Muut velat</field>
@@ -4200,6 +4292,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2911"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a291180">
             <field name="name">Velat omistajille</field>
@@ -4207,6 +4300,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2911"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a2950">
             <field name="name">Siirtovelat</field>
@@ -4214,6 +4308,7 @@
             <field name="type">view</field>
             <field name="user_type" ref="account_type_liability_view"/>
             <field name="parent_id" ref="a29"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a29500">
             <field name="name">Siirtovelat liiketoiminnasta</field>
@@ -4221,6 +4316,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2950"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a29580">
             <field name="name">Siirtovelat investoinneista</field>
@@ -4228,6 +4324,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2950"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a29590">
             <field name="name">Siirtovelat rahoituksesta</field>
@@ -4235,6 +4332,7 @@
             <field name="type">payable</field>
             <field name="user_type" ref="account_type_payable"/>
             <field name="parent_id" ref="a2950"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="a3">
             <field name="name">TULOSLASKELMA</field>
