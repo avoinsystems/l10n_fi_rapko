@@ -18,29 +18,33 @@
 #
 ##############################################################################
 
+# noinspection PyStatementEffect
 {
     "name": "Finland - Accounting (Raportointikoodisto)",
+    "category": "Localization/Account Charts",
     "version": "1.0",
     "description": """
-	Finnish chart of accounts and value added taxes.
+    Finnish chart of accounts and value added taxes.
 
-	Raportointikoodisto (Rapko) details: http://www.raportointikoodisto.fi/
-        Finnish regulations for accounting: http://www.finlex.fi/fi/laki/ajantasa/1997/19971339
-        """,
+    Standard Business Reporting (=SBR or Raportointikoodisto) is a standard code set
+    making Finnish official reporting easier by supplementing the common chart of accounts.
+
+    Raportointikoodisto details: http://www.raportointikoodisto.fi/
+    Finnish regulations for accounting: http://www.finlex.fi/fi/laki/ajantasa/1997/19971339
+    """,
     "author": "RockIt Oy & Avoin.Systems",
-    "website": "http://rockit.fi http://avoin.systems",
-    "category": "Localization/Account Charts",
+    "website": "https://github.com/avoinsystems/l10n_fi_rapko",
     "depends": [
         "account",
         "account_chart",
         "base_vat"
-        ],
+    ],
     "update_xml": [
         'l10n_fi_taxes_code.xml',
         'l10n_fi_chart_of_accounts.xml',
         'l10n_fi_taxes.xml',
         'l10n_fi_chart_wizard.xml'
-        ],
+    ],
     "active": False,
     "installable": True,
 }
