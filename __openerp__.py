@@ -30,6 +30,7 @@
     making Finnish official reporting easier by supplementing the common chart of accounts.
 
     Raportointikoodisto details: http://www.raportointikoodisto.fi/
+
     Finnish regulations for accounting: http://www.finlex.fi/fi/laki/ajantasa/1997/19971339
     """,
     "author": "RockIt Oy & Avoin.Systems",
