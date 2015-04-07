@@ -40,7 +40,7 @@
         "account_chart",
         "base_vat"
     ],
-    "update_xml": [
+    "data": [
         'l10n_fi_taxes_code.xml',
         'l10n_fi_chart_of_accounts.xml',
         'l10n_fi_taxes.xml',
