@@ -54,8 +54,7 @@
             <field name="name">VAT 0 %, Goods (Intra-Community Supply)</field>
             <field name="type">none</field>
             <field name="applicable_type">code</field>
-            <field name="python_applicable">
-                result = product.type != 'service'
+            <field name="python_applicable">result = product.type != 'service'
             </field>
             <field name="base_code_id" ref="tax_code_sales_ic_goods"/>
             <field name="ref_base_code_id" ref="tax_code_sales_ic_goods"/>
@@ -70,8 +69,7 @@
                 (Intra-Community Supply)</field>
             <field name="type">none</field>
             <field name="applicable_type">code</field>
-            <field name="python_applicable">
-                result = product.type == 'service'
+            <field name="python_applicable">result = product.type == 'service'
             </field>
             <field name="base_code_id" ref="tax_code_sales_ic_services"/>
             <field name="ref_base_code_id" ref="tax_code_sales_ic_services"/>
@@ -143,8 +141,7 @@
             <field name="account_collected_id" ref="a291145"/>
             <field name="account_paid_id" ref="a291145"/>
             <field name="applicable_type">code</field>
-            <field name="python_applicable">
-                result = product.type != 'service'
+            <field name="python_applicable">result = product.type != 'service'
             </field>
             <field name="base_code_id" ref="tax_code_purchase_ic_goods"/>
             <field name="ref_base_code_id" ref="tax_code_purchase_ic_goods"/>
@@ -156,18 +153,18 @@
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YPO 0 %</field>
             <field name="name">VAT 0 %, Services</field>
-            <field name="type">none</field>
+            <field name="type">balance</field>
             <field name="account_collected_id" ref="a291146"/>
             <field name="account_paid_id" ref="a291146"/>
             <field name="applicable_type">code</field>
-            <field name="python_applicable">
-                result = product.type == 'service'
+            <field name="python_applicable">result = product.type == 'service'
             </field>
             <field name="base_code_id" ref="tax_code_purchase_ic_services"/>
             <field name="ref_base_code_id"
                    ref="tax_code_purchase_ic_services"/>
             <field name="type_tax_use">purchase</field>
         </record>
+
 
         <!--
         <record id="purchase_vat_non_ic" model="account.tax.template">

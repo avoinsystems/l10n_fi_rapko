@@ -44,8 +44,7 @@
             <field name="sign">1.0</field>
             <field name="notprintable">False</field>
             <field name="parent_id" ref="tax_code_root"/>
-            <field name="name">Maksettava vero
-                / Palautukseen oikeuttava vero (-)
+            <field name="name">Maksettava vero / Palautukseen oikeuttava vero (-)
             </field>
             <field name="sequence">2</field>
         </record>
@@ -103,8 +102,7 @@
             <field name="sign">1.0</field>
             <field name="notprintable">False</field>
             <field name="parent_id" ref="tax_code_pay_deduct"/>
-            <field name="name">Vero rakentamispalvelun ostoista
-                (k&#228;&#228;nnetty verovelvollisuus)
+            <field name="name">Vero rakentamispalvelun ostoista (k&#228;&#228;nnetty verovelvollisuus)
             </field>
         </record>
         <record model="account.tax.code.template" id="tax_code_deductible">
@@ -112,8 +110,7 @@
             <field name="sign">1.0</field>
             <field name="notprintable">False</field>
             <field name="parent_id" ref="tax_code_pay_deduct"/>
-            <field name="name">Kohdekuukauden
-                v&#228;hennett&#228;v&#228; vero
+            <field name="name">Kohdekuukauden v&#228;hennett&#228;v&#228; vero
             </field>
             <field name="sequence">5</field>
         </record>
@@ -163,8 +160,7 @@
             <field name="sign">1.0</field>
             <field name="notprintable">False</field>
             <field name="parent_id" ref="tax_code_sales"/>
-            <field name="name">Rakentamispalveluiden myynnit
-                (k&#228;&#228;nnetty verovelvollisuus)
+            <field name="name">Rakentamispalveluiden myynnit (k&#228;&#228;nnetty verovelvollisuus)
             </field>
         </record>
         <record model="account.tax.code.template"
@@ -281,8 +277,7 @@
             <field name="sign">1.0</field>
             <field name="notprintable">True</field>
             <field name="parent_id" ref="tax_code_deductible"/>
-            <field name="name">K&#228;&#228;nteinen vero,
-                rakentamispalvelut, osto
+            <field name="name">K&#228;&#228;nteinen vero, rakentamispalvelut, osto
             </field>
         </record>
         <record model="account.tax.code.template" id="tax_code_deductible_24">

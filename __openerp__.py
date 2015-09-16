@@ -46,6 +46,7 @@
         "chart_of_accounts.xml",
         "taxes.xml",
         "fiscal_positions.xml",
+        "views/invoice.xml",
     ],
     "active": False,
     "installable": True,
