@@ -46,6 +46,7 @@
         "chart_of_accounts.xml",
         "taxes.xml",
         "fiscal_positions.xml",
+        "views/fiscal_position.xml",
         "views/invoice.xml",
     ],
     "active": False,
