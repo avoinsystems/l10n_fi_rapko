@@ -118,7 +118,8 @@
             <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_goods_24_carry" model="account.tax.template">
-            <field name="sequence">710</field>
+            <field name="parent_id" ref="purchase_vat_ic_goods_24"/>
+            <field name="sequence">71</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YTO 24 %, carry</field>
             <field name="name">VAT 24 %, Goods - carry out</field>
@@ -136,7 +137,8 @@
             <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_goods_24_deduct" model="account.tax.template">
-            <field name="sequence">720</field>
+            <field name="parent_id" ref="purchase_vat_ic_goods_24"/>
+            <field name="sequence">172</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YTO 24 %, deduct</field>
             <field name="name">VAT 24 %, Goods - deduct</field>
@@ -154,7 +156,7 @@
         
         <!-- EU Purchase Goods 14 % -->
         <record id="purchase_vat_ic_goods_14" model="account.tax.template">
-            <field name="sequence">71</field>
+            <field name="sequence">80</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YTO 14 %</field>
             <field name="name">VAT 14 %, Goods</field>
@@ -166,7 +168,8 @@
             <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_goods_14_carry" model="account.tax.template">
-            <field name="sequence">711</field>
+            <field name="parent_id" ref="purchase_vat_ic_goods_14"/>
+            <field name="sequence">81</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YTO 14 %, carry</field>
             <field name="name">VAT 14 %, Goods - carry out</field>
@@ -184,7 +187,8 @@
             <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_goods_14_deduct" model="account.tax.template">
-            <field name="sequence">721</field>
+            <field name="parent_id" ref="purchase_vat_ic_goods_14"/>
+            <field name="sequence">182</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YTO 14 %, deduct</field>
             <field name="name">VAT 14 %, Goods - deduct</field>
@@ -202,7 +206,7 @@
         
         <!-- EU Purchase Goods 10 % -->
         <record id="purchase_vat_ic_goods_10" model="account.tax.template">
-            <field name="sequence">772</field>
+            <field name="sequence">90</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YTO 10 %</field>
             <field name="name">VAT 10 %, Goods</field>
@@ -214,7 +218,8 @@
             <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_goods_10_carry" model="account.tax.template">
-            <field name="sequence">712</field>
+            <field name="parent_id" ref="purchase_vat_ic_goods_10"/>
+            <field name="sequence">91</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YTO 10 %, carry</field>
             <field name="name">VAT 10 %, Goods - carry out</field>
@@ -232,7 +237,8 @@
             <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_goods_10_deduct" model="account.tax.template">
-            <field name="sequence">722</field>
+            <field name="parent_id" ref="purchase_vat_ic_goods_10"/>
+            <field name="sequence">192</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YTO 10 %, deduct</field>
             <field name="name">VAT 10 %, Goods - deduct</field>
@@ -250,7 +256,7 @@
 
         <!-- EU Purchase Services 24 % -->
         <record id="purchase_vat_ic_services_24" model="account.tax.template">
-            <field name="sequence">75</field>
+            <field name="sequence">100</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YPO 24 %</field>
             <field name="name">VAT 24 %, Services</field>
@@ -262,7 +268,8 @@
             <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_services_24_carry" model="account.tax.template">
-            <field name="sequence">710</field>
+            <field name="parent_id" ref="purchase_vat_ic_services_24"/>
+            <field name="sequence">101</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YPO 24 %, carry</field>
             <field name="name">VAT 24 %, Services - carry out</field>
@@ -280,7 +287,8 @@
             <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_services_24_deduct" model="account.tax.template">
-            <field name="sequence">720</field>
+            <field name="parent_id" ref="purchase_vat_ic_services_24"/>
+            <field name="sequence">202</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YPO 24 %, deduct</field>
             <field name="name">VAT 24 %, Services - deduct</field>
@@ -298,7 +306,7 @@
         
         <!-- EU Purchase Services 14 % -->
         <record id="purchase_vat_ic_services_14" model="account.tax.template">
-            <field name="sequence">75</field>
+            <field name="sequence">110</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YPO 14 %</field>
             <field name="name">VAT 14 %, Services</field>
@@ -310,7 +318,8 @@
             <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_services_14_carry" model="account.tax.template">
-            <field name="sequence">710</field>
+            <field name="parent_id" ref="purchase_vat_ic_services_14"/>
+            <field name="sequence">111</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YPO 14 %, carry</field>
             <field name="name">VAT 14 %, Services - carry out</field>
@@ -328,7 +337,8 @@
             <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_services_14_deduct" model="account.tax.template">
-            <field name="sequence">720</field>
+            <field name="parent_id" ref="purchase_vat_ic_services_14"/>
+            <field name="sequence">212</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YPO 14 %, deduct</field>
             <field name="name">VAT 14 %, Services - deduct</field>
@@ -346,7 +356,7 @@
         
         <!-- EU Purchase Services 10 % -->
         <record id="purchase_vat_ic_services_10" model="account.tax.template">
-            <field name="sequence">75</field>
+            <field name="sequence">120</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YPO 10 %</field>
             <field name="name">VAT 10 %, Services</field>
@@ -358,7 +368,8 @@
             <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_services_10_carry" model="account.tax.template">
-            <field name="sequence">710</field>
+            <field name="parent_id" ref="purchase_vat_ic_services_10"/>
+            <field name="sequence">121</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YPO 10 %, carry</field>
             <field name="name">VAT 10 %, Services - carry out</field>
@@ -376,7 +387,8 @@
             <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_services_10_deduct" model="account.tax.template">
-            <field name="sequence">720</field>
+            <field name="parent_id" ref="purchase_vat_ic_services_10"/>
+            <field name="sequence">222</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YPO 10 %, deduct</field>
             <field name="name">VAT 10 %, Services - deduct</field>
@@ -395,7 +407,7 @@
         <!-- EU SALES -->
         <!-- EU Sales Goods -->
         <record id="sales_vat_ic_goods" model="account.tax.template">
-            <field name="sequence">110</field>
+            <field name="sequence">130</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YTM 0 %</field>
             <field name="name">VAT 0 %, Goods (Intra-Community Supply)</field>
@@ -412,9 +424,9 @@
         
         <!-- EU Sales Services -->
         <record id="sales_vat_ic_services" model="account.tax.template">
-            <field name="sequence">120</field>
+            <field name="sequence">140</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="description">YTM 0 %</field>
+            <field name="description">YPM 0 %</field>
             <field name="name">VAT 0 %, Services (Intra-Community Supply)</field>
             <field name="type">none</field>
             <field name="applicable_type">code</field>
