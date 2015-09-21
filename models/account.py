@@ -233,6 +233,6 @@ class AccountFiscalPositionTemplate(models.Model):
                     'account_src_id': acc_template_ref[acc.account_src_id.id],
                     'account_dest_id': acc_template_ref[acc.account_dest_id.id],
                     'position_id': new_fp,
-                    'product_type': tax.product_type
+                    'product_type': acc.product_type
                 })
         return True
