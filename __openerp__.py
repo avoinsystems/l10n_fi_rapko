@@ -41,11 +41,11 @@
         "base_vat"
     ],
     "data": [
-        "tax_codes.xml",
-        "accounts.xml",
-        "chart_of_accounts.xml",
-        "taxes.xml",
-        "fiscal_positions.xml",
+        "data/tax_codes.xml",
+        "data/accounts.xml",
+        "data/chart_of_accounts.xml",
+        "data/taxes.xml",
+        "data/fiscal_positions.xml",
         "views/fiscal_position.xml",
         "views/invoice.xml",
     ],
