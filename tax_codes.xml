@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <!-- Root -->
+        <record model="account.tax.code.template" id="tax_code_root">
+            <field name="sign">1.0</field>
+            <field name="notprintable">False</field>
+            <field name="name">Company</field>
+            <field name="sequence">1</field>
+        </record>
+
+        <!-- Sales and Purchase Base -->
+        <record model="account.tax.code.template" id="tax_code_base">
+            <field name="sign">1.0</field>
+            <field name="notprintable">True</field>
+            <field name="parent_id" ref="tax_code_root"/>
+            <field name="name">Verojen perusteet</field>
+            <field name="sequence">3</field>
+        </record>
+
+        <!-- Sales Base -->
+        <record model="account.tax.code.template" id="tax_code_sales">
+            <field name="sign">1.0</field>
+            <field name="notprintable">True</field>
+            <field name="parent_id" ref="tax_code_base"/>
+            <field name="name">Myynti</field>
+        </record>
+
+        <!-- Purchase Base -->
+        <record model="account.tax.code.template" id="tax_code_purchase">
+            <field name="sign">1.0</field>
+            <field name="notprintable">True</field>
+            <field name="parent_id" ref="tax_code_base"/>
+            <field name="name">Ostot yhteens&#228;</field>
+        </record>
+
+        
+        <!--=== ON REPORT ===-->
+        
+        <!-- Payable / deductible -->
+        <record model="account.tax.code.template" id="tax_code_pay_deduct">
+            <field name="code">308</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">False</field>
+            <field name="parent_id" ref="tax_code_root"/>
+            <field name="name">Maksettava vero / Palautukseen oikeuttava vero (-)
+            </field>
+            <field name="sequence">2</field>
+        </record>
+
+        <!-- Payable Taxes -->
+        <record model="account.tax.code.template" id="tax_code_taxes_sale">
+            <field name="sign">1.0</field>
+            <field name="notprintable">True</field>
+            <field name="parent_id" ref="tax_code_pay_deduct"/>
+            <field name="name">Myynnin verot</field>
+            <field name="sequence">4</field>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_taxes_sale_24">
+            <field name="code">301</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">False</field>
+            <field name="parent_id" ref="tax_code_taxes_sale"/>
+            <field name="name">24 %:n vero</field>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_taxes_sale_14">
+            <field name="code">302</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">False</field>
+            <field name="parent_id" ref="tax_code_taxes_sale"/>
+            <field name="name">14 %:n vero</field>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_taxes_sale_10">
+            <field name="code">303</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">False</field>
+            <field name="parent_id" ref="tax_code_taxes_sale"/>
+            <field name="name">10 %:n vero</field>
+        </record>
+
+        <!-- Deductible Taxes -->
+        <record model="account.tax.code.template" 
+                id="tax_code_taxes_purchase_ic_goods">
+            <field name="code">305</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">False</field>
+            <field name="parent_id" ref="tax_code_pay_deduct"/>
+            <field name="name">Vero tavaraostoista muista EU-maista</field>
+        </record>
+        <record model="account.tax.code.template" 
+                id="tax_code_taxes_purchase_ic_services">
+            <field name="code">306</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">False</field>
+            <field name="parent_id" ref="tax_code_pay_deduct"/>
+            <field name="name">Vero palveluostoista muista EU-maista</field>
+        </record>
+        <record model="account.tax.code.template"
+                id="tax_code_taxes_purchase_constr">
+            <field name="code">318</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">False</field>
+            <field name="parent_id" ref="tax_code_pay_deduct"/>
+            <field name="name">Vero rakentamispalvelun ostoista (k&#228;&#228;nnetty verovelvollisuus)
+            </field>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_deductible">
+            <field name="code">307</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">False</field>
+            <field name="parent_id" ref="tax_code_pay_deduct"/>
+            <field name="name">Kohdekuukauden v&#228;hennett&#228;v&#228; vero
+            </field>
+            <field name="sequence">5</field>
+        </record>
+
+
+        <!-- Intra-Community and Other Bases -->
+        <record model="account.tax.code.template" id="tax_code_vat0">
+            <field name="code">309</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">False</field>
+            <field name="parent_id" ref="tax_code_sales"/>
+            <field name="name">0-verokannan alainen liikevaihto</field>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_sales_ic_goods">
+            <field name="code">311</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">False</field>
+            <field name="parent_id" ref="tax_code_sales"/>
+            <field name="name">Tavaroiden myynnit muihin EU-maihin</field>
+        </record>
+        <record model="account.tax.code.template" 
+                id="tax_code_sales_ic_services">
+            <field name="code">312</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">False</field>
+            <field name="parent_id" ref="tax_code_sales"/>
+            <field name="name">Palveluiden myynnit muihin EU-maihin</field>
+        </record>
+        <record model="account.tax.code.template" 
+                id="tax_code_purchase_ic_goods">
+            <field name="code">313</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">False</field>
+            <field name="parent_id" ref="tax_code_purchase"/>
+            <field name="name">Tavaraostot muista EU-maista</field>
+        </record>
+        <record model="account.tax.code.template"
+                id="tax_code_purchase_ic_services">
+            <field name="code">314</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">False</field>
+            <field name="parent_id" ref="tax_code_purchase"/>
+            <field name="name">Palveluostot muista EU-maista</field>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_constr_sales">
+            <field name="code">319</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">False</field>
+            <field name="parent_id" ref="tax_code_sales"/>
+            <field name="name">Rakentamispalveluiden myynnit (k&#228;&#228;nnetty verovelvollisuus)
+            </field>
+        </record>
+        <record model="account.tax.code.template"
+                id="tax_code_constr_purchase">
+            <field name="code">320</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">False</field>
+            <field name="parent_id" ref="tax_code_purchase"/>
+            <field name="name">Rakentamispalvelun ostot</field>
+        </record>
+
+
+
+        <!--=== OFF REPORT ===-->
+
+
+        <record model="account.tax.code.template" id="tax_code_base_sales_24">
+            <field name="code">301.2</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">True</field>
+            <field name="parent_id" ref="tax_code_sales"/>
+            <field name="name">Myynti ALV 24 %</field>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_base_sales_14">
+            <field name="code">302.2</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">True</field>
+            <field name="parent_id" ref="tax_code_sales"/>
+            <field name="name">Myynti ALV 14 %</field>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_base_sales_10">
+            <field name="code">303.2</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">True</field>
+            <field name="parent_id" ref="tax_code_sales"/>
+            <field name="name">Myynti ALV 10 %</field>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_base_sales_0">
+            <field name="code">309.1</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">True</field>
+            <field name="parent_id" ref="tax_code_vat0"/>
+            <field name="name">Myynti ALV 0 %</field>
+        </record>
+        <record model="account.tax.code.template"
+                id="tax_code_base_sales_non_ic">
+            <field name="code">309.2</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">True</field>
+            <field name="parent_id" ref="tax_code_vat0"/>
+            <field name="name">Myynti ei-yhteis&#246; 0 %</field>
+        </record>
+
+
+        <record model="account.tax.code.template"
+                id="tax_code_base_purchase_24">
+            <field name="code">307.10</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">True</field>
+            <field name="parent_id" ref="tax_code_purchase"/>
+            <field name="name">Ostot ALV 24 %</field>
+        </record>
+        <record model="account.tax.code.template"
+                id="tax_code_base_purchase_14">
+            <field name="code">307.11</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">True</field>
+            <field name="parent_id" ref="tax_code_purchase"/>
+            <field name="name">Ostot ALV 14 %</field>
+        </record>
+        <record model="account.tax.code.template"
+                id="tax_code_base_purchase_10">
+            <field name="code">307.12</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">True</field>
+            <field name="parent_id" ref="tax_code_purchase"/>
+            <field name="name">Ostot ALV 10 %</field>
+        </record>
+        <record model="account.tax.code.template"
+                id="tax_code_base_purchase_0">
+            <field name="sign">1.0</field>
+            <field name="notprintable">True</field>
+            <field name="parent_id" ref="tax_code_purchase"/>
+            <field name="name">Ostot ALV 0 %</field>
+        </record>
+        <record model="account.tax.code.template"
+                id="tax_code_base_purchase_non_ic">
+            <field name="sign">1.0</field>
+            <field name="notprintable">True</field>
+            <field name="parent_id" ref="tax_code_purchase"/>
+            <field name="name">Ostot ei-yhteis&#246; 0 %</field>
+        </record>
+
+        <!-- Detailed Tax Codes -->
+        <record model="account.tax.code.template" id="tax_code_taxes_sale_rev">
+            <field name="code">301.10</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">True</field>
+            <field name="parent_id" ref="tax_code_taxes_sale_24"/>
+            <field name="name">K&#228;&#228;nnetty verovelvollisuus</field>
+        </record>
+        <record model="account.tax.code.template"
+                id="tax_code_deductible_24_rev">
+            <field name="code">307.27</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">True</field>
+            <field name="parent_id" ref="tax_code_deductible"/>
+            <field name="name">K&#228;&#228;nnetty verovelvollisuus 24 % osto
+            </field>
+        </record>
+        <record model="account.tax.code.template"
+                id="tax_code_deductible_constr">
+            <field name="code">307.28</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">True</field>
+            <field name="parent_id" ref="tax_code_deductible"/>
+            <field name="name">K&#228;&#228;nteinen vero, rakentamispalvelut, osto
+            </field>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_deductible_24">
+            <field name="code">307.2</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">True</field>
+            <field name="parent_id" ref="tax_code_deductible"/>
+            <field name="name">Ostojen verot ALV 24 %</field>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_deductible_14">
+            <field name="code">307.21</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">True</field>
+            <field name="parent_id" ref="tax_code_deductible"/>
+            <field name="name">Ostojen verot ALV 14 %</field>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_deductible_10">
+            <field name="code">307.22</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">True</field>
+            <field name="parent_id" ref="tax_code_deductible"/>
+            <field name="name">Ostojen verot ALV 10 %</field>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_deductible_ic">
+            <field name="code">307.23</field>
+            <field name="sign">1.0</field>
+            <field name="notprintable">True</field>
+            <field name="parent_id" ref="tax_code_deductible"/>
+            <field name="name">Ostojen verot yhteis&#246;</field>
+        </record>
+
+    </data>
+</openerp>
+
+

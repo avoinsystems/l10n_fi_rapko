@@ -41,10 +41,13 @@
         "base_vat"
     ],
     "data": [
-        'l10n_fi_taxes_code.xml',
-        'l10n_fi_chart_of_accounts.xml',
-        'l10n_fi_taxes.xml',
-        'l10n_fi_chart_wizard.xml'
+        "tax_codes.xml",
+        "accounts.xml",
+        "chart_of_accounts.xml",
+        "taxes.xml",
+        "fiscal_positions.xml",
+        "views/fiscal_position.xml",
+        "views/invoice.xml",
     ],
     "active": False,
     "installable": True,

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- FORM: Fiscal Position (account.fiscal.position) -->
+        <record id="view_account_position_form_rapko" model="ir.ui.view">
+            <field name="name">account.fiscal.position.form.rapko</field>
+            <field name="model">account.fiscal.position</field>
+            <field name="inherit_id" ref="account.view_account_position_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <!-- TREE: Tax mapping -->
+                    <xpath expr="//field[@name='tax_ids']/tree/field[@name='tax_dest_id']"
+                           position="after">
+                        <field name="product_type"/>
+                    </xpath>
+
+                    <!-- FORM: Tax mapping -->
+                    <xpath expr="//field[@name='tax_ids']/form/field[@name='tax_dest_id']"
+                           position="after">
+                        <field name="product_type"/>
+                    </xpath>
+
+                    <!-- TREE: Account mapping -->
+                    <xpath expr="//field[@name='account_ids']/tree/field[@name='account_dest_id']"
+                           position="after">
+                        <field name="product_type"/>
+                    </xpath>
+
+                    <!-- FORM: Account mapping -->
+                    <xpath expr="//field[@name='account_ids']/form/field[@name='account_dest_id']"
+                           position="after">
+                        <field name="product_type"/>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+        <!-- FORM: Fiscal Position Template (account.fiscal.position.template) -->
+        <record id="view_account_position_template_form_rapko"
+                model="ir.ui.view">
+            <field name="name">account.fiscal.position.template.form.rapko</field>
+            <field name="model">account.fiscal.position.template</field>
+            <field name="inherit_id"
+                   ref="account.view_account_position_template_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <!-- TREE: Tax mapping -->
+                    <xpath expr="//field[@name='tax_ids']/tree/field[@name='tax_dest_id']"
+                           position="after">
+                        <field name="product_type"/>
+                    </xpath>
+
+                    <!-- FORM: Tax mapping -->
+                    <xpath expr="//field[@name='tax_ids']/form/field[@name='tax_dest_id']"
+                           position="after">
+                        <field name="product_type"/>
+                    </xpath>
+
+                    <!-- TREE: Account mapping -->
+                    <xpath expr="//field[@name='account_ids']/tree/field[@name='account_dest_id']"
+                           position="after">
+                        <field name="product_type"/>
+                    </xpath>
+
+                    <!-- FORM: Account mapping -->
+                    <xpath expr="//field[@name='account_ids']/form/field[@name='account_dest_id']"
+                           position="after">
+                        <field name="product_type"/>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+    </data>
+</openerp>

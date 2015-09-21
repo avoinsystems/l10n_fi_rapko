@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="chart_template_fi_rapko" model="account.chart.template">
+            <field name="name">Finnish Chart of Accounts (Raportointikoodisto)</field>
+            <field name="account_root_id" ref="a0"/>
+            <field name="tax_code_root_id" ref="tax_code_root"/>
+            <field name="bank_account_view_id" ref="a1901"/>
+            <field name="property_account_receivable" ref="a1700"/>
+            <field name="property_account_payable" ref="a29060"/>
+            <field name="property_account_expense_categ" ref="a4000"/>
+            <field name="property_account_income_categ" ref="a300000"/>
+        </record>
+
+    </data>
+</openerp>

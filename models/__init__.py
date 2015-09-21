@@ -17,4 +17,4 @@
 #    <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from . import models
+from . import account

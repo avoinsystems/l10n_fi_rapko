@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="sales_vat24" model="account.tax.template">
+            <field name="sequence">10</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="name">VAT 24 %</field>
+            <field name="amount">0.24</field>
+            <field name="type">percent</field>
+            <field name="account_collected_id" ref="a291141"/>
+            <field name="account_paid_id" ref="a291141"/>
+            <field name="base_code_id" ref="tax_code_base_sales_24"/>
+            <field name="tax_code_id" ref="tax_code_taxes_sale_24"/>
+            <field name="ref_base_code_id" ref="tax_code_base_sales_24"/>
+            <field name="ref_tax_code_id" ref="tax_code_taxes_sale_24"/>
+            <field name="type_tax_use">sale</field>
+        </record>
+
+        <record id="sales_vat14" model="account.tax.template">
+            <field name="sequence">20</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="name">VAT 14 %</field>
+            <field name="amount">0.14</field>
+            <field name="type">percent</field>
+            <field name="account_collected_id" ref="a291142"/>
+            <field name="account_paid_id" ref="a291142"/>
+            <field name="base_code_id" ref="tax_code_base_sales_14"/>
+            <field name="tax_code_id" ref="tax_code_taxes_sale_14"/>
+            <field name="ref_base_code_id" ref="tax_code_base_sales_14"/>
+            <field name="ref_tax_code_id" ref="tax_code_taxes_sale_14"/>
+            <field name="type_tax_use">sale</field>
+        </record>
+
+        <record id="sales_vat10" model="account.tax.template">
+            <field name="sequence">30</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="name">VAT 10 %</field>
+            <field name="amount">0.1</field>
+            <field name="type">percent</field>
+            <field name="account_collected_id" ref="a291143"/>
+            <field name="account_paid_id" ref="a291143"/>
+            <field name="base_code_id" ref="tax_code_base_sales_10"/>
+            <field name="tax_code_id" ref="tax_code_taxes_sale_10"/>
+            <field name="ref_base_code_id" ref="tax_code_base_sales_10"/>
+            <field name="ref_tax_code_id" ref="tax_code_taxes_sale_10"/>
+            <field name="type_tax_use">sale</field>
+        </record>
+
+        <record id="sales_vat_non_ic" model="account.tax.template">
+            <field name="sequence">34</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="name">VAT 0 % Export</field>
+            <field name="type">none</field>
+            <field name="base_code_id" ref="tax_code_base_sales_non_ic"/>
+            <field name="ref_base_code_id"
+                   ref="tax_code_base_sales_non_ic"/>
+            <field name="type_tax_use">sale</field>
+        </record>
+
+        <record id="purchase_vat24" model="account.tax.template">
+            <field name="sequence">40</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="name">Purchase VAT 24 %</field>
+            <field name="amount">0.24</field>
+            <field name="type">percent</field>
+            <field name="account_collected_id" ref="a1762"/>
+            <field name="account_paid_id" ref="a1762"/>
+            <field name="base_code_id" ref="tax_code_base_purchase_24"/>
+            <field name="tax_code_id" ref="tax_code_deductible_24"/>
+            <field name="ref_base_code_id" ref="tax_code_base_purchase_24"/>
+            <field name="ref_tax_code_id" ref="tax_code_deductible_24"/>
+            <field name="type_tax_use">purchase</field>
+        </record>
+
+        <record id="purchase_vat14" model="account.tax.template">
+            <field name="sequence">50</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="name">Purchase VAT 14 %</field>
+            <field name="amount">0.14</field>
+            <field name="type">percent</field>
+            <field name="account_collected_id" ref="a1762"/>
+            <field name="account_paid_id" ref="a1762"/>
+            <field name="base_code_id" ref="tax_code_base_purchase_14"/>
+            <field name="tax_code_id" ref="tax_code_deductible_14"/>
+            <field name="ref_base_code_id" ref="tax_code_base_purchase_14"/>
+            <field name="ref_tax_code_id" ref="tax_code_deductible_14"/>
+            <field name="type_tax_use">purchase</field>
+        </record>
+
+        <record id="purchase_vat10" model="account.tax.template">
+            <field name="sequence">60</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="name">Purchase VAT 10 %</field>
+            <field name="amount">0.9</field>
+            <field name="type">percent</field>
+            <field name="account_collected_id" ref="a1762"/>
+            <field name="account_paid_id" ref="a1762"/>
+            <field name="base_code_id" ref="tax_code_base_purchase_10"/>
+            <field name="tax_code_id" ref="tax_code_deductible_10"/>
+            <field name="ref_base_code_id" ref="tax_code_base_purchase_10"/>
+            <field name="ref_tax_code_id" ref="tax_code_deductible_10"/>
+            <field name="type_tax_use">purchase</field>
+        </record>
+        
+        <!-- EU PURCHASE -->
+        <!-- EU Purchase Goods 24 % -->
+        <record id="purchase_vat_ic_goods_24" model="account.tax.template">
+            <field name="sequence">70</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="description">YTO 24 %</field>
+            <field name="name">VAT 24 %, Goods</field>
+            <field name="type">balance</field>
+            <field name="applicable_type">code</field>
+            <field name="python_applicable">result = product.type != 'service'
+            </field>
+            <field name="child_depend" eval="True"/>
+            <field name="type_tax_use">purchase</field>
+        </record>
+        <record id="purchase_vat_ic_goods_24_carry" model="account.tax.template">
+            <field name="parent_id" ref="purchase_vat_ic_goods_24"/>
+            <field name="sequence">71</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="description">YTO 24 %, carry</field>
+            <field name="name">VAT 24 %, Goods - carry out</field>
+            <field name="type">percent</field>
+            <field name="amount">0.24</field>
+            <field name="applicable_type">true</field>
+            <field name="account_collected_id" ref="a291145"/>
+            <field name="account_paid_id" ref="a291145"/>
+            <field name="base_code_id" ref="tax_code_purchase_ic_goods"/>
+            <field name="ref_base_code_id" ref="tax_code_purchase_ic_goods"/>
+            <field name="ref_base_sign">-1</field>
+            <field name="tax_code_id" ref="tax_code_taxes_purchase_ic_goods"/>
+            <field name="ref_tax_code_id" ref="tax_code_taxes_purchase_ic_goods"/>
+            <field name="ref_tax_sign">-1</field>
+            <field name="type_tax_use">purchase</field>
+        </record>
+        <record id="purchase_vat_ic_goods_24_deduct" model="account.tax.template">
+            <field name="parent_id" ref="purchase_vat_ic_goods_24"/>
+            <field name="sequence">172</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="description">YTO 24 %, deduct</field>
+            <field name="name">VAT 24 %, Goods - deduct</field>
+            <field name="type">percent</field>
+            <field name="amount">-0.24</field>
+            <field name="applicable_type">true</field>
+            <field name="account_collected_id" ref="a291151"/>
+            <field name="account_paid_id" ref="a291151"/>
+            <field name="ref_base_sign">-1</field>
+            <field name="tax_code_id" ref="tax_code_deductible_ic"/>
+            <field name="ref_tax_code_id" ref="tax_code_deductible_ic"/>
+            <field name="ref_tax_sign">-1</field>
+            <field name="type_tax_use">purchase</field>
+        </record>
+        
+        <!-- EU Purchase Goods 14 % -->
+        <record id="purchase_vat_ic_goods_14" model="account.tax.template">
+            <field name="sequence">80</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="description">YTO 14 %</field>
+            <field name="name">VAT 14 %, Goods</field>
+            <field name="type">balance</field>
+            <field name="applicable_type">code</field>
+            <field name="python_applicable">result = product.type != 'service'
+            </field>
+            <field name="child_depend" eval="True"/>
+            <field name="type_tax_use">purchase</field>
+        </record>
+        <record id="purchase_vat_ic_goods_14_carry" model="account.tax.template">
+            <field name="parent_id" ref="purchase_vat_ic_goods_14"/>
+            <field name="sequence">81</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="description">YTO 14 %, carry</field>
+            <field name="name">VAT 14 %, Goods - carry out</field>
+            <field name="type">percent</field>
+            <field name="amount">0.14</field>
+            <field name="applicable_type">true</field>
+            <field name="account_collected_id" ref="a291145"/>
+            <field name="account_paid_id" ref="a291145"/>
+            <field name="base_code_id" ref="tax_code_purchase_ic_goods"/>
+            <field name="ref_base_code_id" ref="tax_code_purchase_ic_goods"/>
+            <field name="ref_base_sign">-1</field>
+            <field name="tax_code_id" ref="tax_code_taxes_purchase_ic_goods"/>
+            <field name="ref_tax_code_id" ref="tax_code_taxes_purchase_ic_goods"/>
+            <field name="ref_tax_sign">-1</field>
+            <field name="type_tax_use">purchase</field>
+        </record>
+        <record id="purchase_vat_ic_goods_14_deduct" model="account.tax.template">
+            <field name="parent_id" ref="purchase_vat_ic_goods_14"/>
+            <field name="sequence">182</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="description">YTO 14 %, deduct</field>
+            <field name="name">VAT 14 %, Goods - deduct</field>
+            <field name="type">percent</field>
+            <field name="amount">-0.14</field>
+            <field name="applicable_type">true</field>
+            <field name="account_collected_id" ref="a291151"/>
+            <field name="account_paid_id" ref="a291151"/>
+            <field name="ref_base_sign">-1</field>
+            <field name="tax_code_id" ref="tax_code_deductible_ic"/>
+            <field name="ref_tax_code_id" ref="tax_code_deductible_ic"/>
+            <field name="ref_tax_sign">-1</field>
+            <field name="type_tax_use">purchase</field>
+        </record>
+        
+        <!-- EU Purchase Goods 10 % -->
+        <record id="purchase_vat_ic_goods_10" model="account.tax.template">
+            <field name="sequence">90</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="description">YTO 10 %</field>
+            <field name="name">VAT 10 %, Goods</field>
+            <field name="type">balance</field>
+            <field name="applicable_type">code</field>
+            <field name="python_applicable">result = product.type != 'service'
+            </field>
+            <field name="child_depend" eval="True"/>
+            <field name="type_tax_use">purchase</field>
+        </record>
+        <record id="purchase_vat_ic_goods_10_carry" model="account.tax.template">
+            <field name="parent_id" ref="purchase_vat_ic_goods_10"/>
+            <field name="sequence">91</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="description">YTO 10 %, carry</field>
+            <field name="name">VAT 10 %, Goods - carry out</field>
+            <field name="type">percent</field>
+            <field name="amount">0.10</field>
+            <field name="applicable_type">true</field>
+            <field name="account_collected_id" ref="a291145"/>
+            <field name="account_paid_id" ref="a291145"/>
+            <field name="base_code_id" ref="tax_code_purchase_ic_goods"/>
+            <field name="ref_base_code_id" ref="tax_code_purchase_ic_goods"/>
+            <field name="ref_base_sign">-1</field>
+            <field name="tax_code_id" ref="tax_code_taxes_purchase_ic_goods"/>
+            <field name="ref_tax_code_id" ref="tax_code_taxes_purchase_ic_goods"/>
+            <field name="ref_tax_sign">-1</field>
+            <field name="type_tax_use">purchase</field>
+        </record>
+        <record id="purchase_vat_ic_goods_10_deduct" model="account.tax.template">
+            <field name="parent_id" ref="purchase_vat_ic_goods_10"/>
+            <field name="sequence">192</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="description">YTO 10 %, deduct</field>
+            <field name="name">VAT 10 %, Goods - deduct</field>
+            <field name="type">percent</field>
+            <field name="amount">-0.10</field>
+            <field name="applicable_type">true</field>
+            <field name="account_collected_id" ref="a291151"/>
+            <field name="account_paid_id" ref="a291151"/>
+            <field name="ref_base_sign">-1</field>
+            <field name="tax_code_id" ref="tax_code_deductible_ic"/>
+            <field name="ref_tax_code_id" ref="tax_code_deductible_ic"/>
+            <field name="ref_tax_sign">-1</field>
+            <field name="type_tax_use">purchase</field>
+        </record>
+
+        <!-- EU Purchase Services 24 % -->
+        <record id="purchase_vat_ic_services_24" model="account.tax.template">
+            <field name="sequence">100</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="description">YPO 24 %</field>
+            <field name="name">VAT 24 %, Services</field>
+            <field name="type">balance</field>
+            <field name="applicable_type">code</field>
+            <field name="python_applicable">result = product.type == 'service'
+            </field>
+            <field name="child_depend" eval="True"/>
+            <field name="type_tax_use">purchase</field>
+        </record>
+        <record id="purchase_vat_ic_services_24_carry" model="account.tax.template">
+            <field name="parent_id" ref="purchase_vat_ic_services_24"/>
+            <field name="sequence">101</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="description">YPO 24 %, carry</field>
+            <field name="name">VAT 24 %, Services - carry out</field>
+            <field name="type">percent</field>
+            <field name="amount">0.24</field>
+            <field name="applicable_type">true</field>
+            <field name="account_collected_id" ref="a291146"/>
+            <field name="account_paid_id" ref="a291146"/>
+            <field name="base_code_id" ref="tax_code_purchase_ic_services"/>
+            <field name="ref_base_code_id" ref="tax_code_purchase_ic_services"/>
+            <field name="ref_base_sign">-1</field>
+            <field name="tax_code_id" ref="tax_code_taxes_purchase_ic_services"/>
+            <field name="ref_tax_code_id" ref="tax_code_taxes_purchase_ic_services"/>
+            <field name="ref_tax_sign">-1</field>
+            <field name="type_tax_use">purchase</field>
+        </record>
+        <record id="purchase_vat_ic_services_24_deduct" model="account.tax.template">
+            <field name="parent_id" ref="purchase_vat_ic_services_24"/>
+            <field name="sequence">202</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="description">YPO 24 %, deduct</field>
+            <field name="name">VAT 24 %, Services - deduct</field>
+            <field name="type">percent</field>
+            <field name="amount">-0.24</field>
+            <field name="applicable_type">true</field>
+            <field name="account_collected_id" ref="a291151"/>
+            <field name="account_paid_id" ref="a291151"/>
+            <field name="ref_base_sign">-1</field>
+            <field name="tax_code_id" ref="tax_code_deductible_ic"/>
+            <field name="ref_tax_code_id" ref="tax_code_deductible_ic"/>
+            <field name="ref_tax_sign">-1</field>
+            <field name="type_tax_use">purchase</field>
+        </record>
+        
+        <!-- EU Purchase Services 14 % -->
+        <record id="purchase_vat_ic_services_14" model="account.tax.template">
+            <field name="sequence">110</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="description">YPO 14 %</field>
+            <field name="name">VAT 14 %, Services</field>
+            <field name="type">balance</field>
+            <field name="applicable_type">code</field>
+            <field name="python_applicable">result = product.type == 'service'
+            </field>
+            <field name="child_depend" eval="True"/>
+            <field name="type_tax_use">purchase</field>
+        </record>
+        <record id="purchase_vat_ic_services_14_carry" model="account.tax.template">
+            <field name="parent_id" ref="purchase_vat_ic_services_14"/>
+            <field name="sequence">111</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="description">YPO 14 %, carry</field>
+            <field name="name">VAT 14 %, Services - carry out</field>
+            <field name="type">percent</field>
+            <field name="amount">0.14</field>
+            <field name="applicable_type">true</field>
+            <field name="account_collected_id" ref="a291146"/>
+            <field name="account_paid_id" ref="a291146"/>
+            <field name="base_code_id" ref="tax_code_purchase_ic_services"/>
+            <field name="ref_base_code_id" ref="tax_code_purchase_ic_services"/>
+            <field name="ref_base_sign">-1</field>
+            <field name="tax_code_id" ref="tax_code_taxes_purchase_ic_services"/>
+            <field name="ref_tax_code_id" ref="tax_code_taxes_purchase_ic_services"/>
+            <field name="ref_tax_sign">-1</field>
+            <field name="type_tax_use">purchase</field>
+        </record>
+        <record id="purchase_vat_ic_services_14_deduct" model="account.tax.template">
+            <field name="parent_id" ref="purchase_vat_ic_services_14"/>
+            <field name="sequence">212</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="description">YPO 14 %, deduct</field>
+            <field name="name">VAT 14 %, Services - deduct</field>
+            <field name="type">percent</field>
+            <field name="amount">-0.14</field>
+            <field name="applicable_type">true</field>
+            <field name="account_collected_id" ref="a291151"/>
+            <field name="account_paid_id" ref="a291151"/>
+            <field name="ref_base_sign">-1</field>
+            <field name="tax_code_id" ref="tax_code_deductible_ic"/>
+            <field name="ref_tax_code_id" ref="tax_code_deductible_ic"/>
+            <field name="ref_tax_sign">-1</field>
+            <field name="type_tax_use">purchase</field>
+        </record>
+        
+        <!-- EU Purchase Services 10 % -->
+        <record id="purchase_vat_ic_services_10" model="account.tax.template">
+            <field name="sequence">120</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="description">YPO 10 %</field>
+            <field name="name">VAT 10 %, Services</field>
+            <field name="type">balance</field>
+            <field name="applicable_type">code</field>
+            <field name="python_applicable">result = product.type == 'service'
+            </field>
+            <field name="child_depend" eval="True"/>
+            <field name="type_tax_use">purchase</field>
+        </record>
+        <record id="purchase_vat_ic_services_10_carry" model="account.tax.template">
+            <field name="parent_id" ref="purchase_vat_ic_services_10"/>
+            <field name="sequence">121</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="description">YPO 10 %, carry</field>
+            <field name="name">VAT 10 %, Services - carry out</field>
+            <field name="type">percent</field>
+            <field name="amount">0.10</field>
+            <field name="applicable_type">true</field>
+            <field name="account_collected_id" ref="a291146"/>
+            <field name="account_paid_id" ref="a291146"/>
+            <field name="base_code_id" ref="tax_code_purchase_ic_services"/>
+            <field name="ref_base_code_id" ref="tax_code_purchase_ic_services"/>
+            <field name="ref_base_sign">-1</field>
+            <field name="tax_code_id" ref="tax_code_taxes_purchase_ic_services"/>
+            <field name="ref_tax_code_id" ref="tax_code_taxes_purchase_ic_services"/>
+            <field name="ref_tax_sign">-1</field>
+            <field name="type_tax_use">purchase</field>
+        </record>
+        <record id="purchase_vat_ic_services_10_deduct" model="account.tax.template">
+            <field name="parent_id" ref="purchase_vat_ic_services_10"/>
+            <field name="sequence">222</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="description">YPO 10 %, deduct</field>
+            <field name="name">VAT 10 %, Services - deduct</field>
+            <field name="type">percent</field>
+            <field name="amount">-0.10</field>
+            <field name="applicable_type">true</field>
+            <field name="account_collected_id" ref="a291151"/>
+            <field name="account_paid_id" ref="a291151"/>
+            <field name="ref_base_sign">-1</field>
+            <field name="tax_code_id" ref="tax_code_deductible_ic"/>
+            <field name="ref_tax_code_id" ref="tax_code_deductible_ic"/>
+            <field name="ref_tax_sign">-1</field>
+            <field name="type_tax_use">purchase</field>
+        </record>
+        
+        <!-- EU SALES -->
+        <!-- EU Sales Goods -->
+        <record id="sales_vat_ic_goods" model="account.tax.template">
+            <field name="sequence">130</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="description">YTM 0 %</field>
+            <field name="name">VAT 0 %, Goods (Intra-Community Supply)</field>
+            <field name="type">none</field>
+            <field name="applicable_type">code</field>
+            <field name="python_applicable">result = product.type != 'service'
+            </field>
+            <field name="base_code_id" ref="tax_code_sales_ic_goods"/>
+            <field name="ref_base_code_id" ref="tax_code_sales_ic_goods"/>
+            <field name="ref_base_sign">-1</field>
+            <field name="ref_tax_sign">-1</field>
+            <field name="type_tax_use">sale</field>
+        </record>
+        
+        <!-- EU Sales Services -->
+        <record id="sales_vat_ic_services" model="account.tax.template">
+            <field name="sequence">140</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="description">YPM 0 %</field>
+            <field name="name">VAT 0 %, Services (Intra-Community Supply)</field>
+            <field name="type">none</field>
+            <field name="applicable_type">code</field>
+            <field name="python_applicable">result = product.type == 'service'
+            </field>
+            <field name="base_code_id" ref="tax_code_sales_ic_services"/>
+            <field name="ref_base_code_id" ref="tax_code_sales_ic_services"/>
+            <field name="ref_base_sign">-1</field>
+            <field name="ref_tax_sign">-1</field>
+            <field name="type_tax_use">sale</field>
+        </record>
+
+
+        <!--
+        <record id="sales_vat_non_ic" model="account.tax.template">
+            <field name="sequence">80</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="name">VAT 0 %, Import</field>
+            <field name="type">none</field>
+            <field name="base_code_id" ref="tax_code_base_sales_non_ic"/>
+            <field name="ref_base_code_id"
+                   ref="tax_code_base_sales_non_ic"/>
+            <field name="type_tax_use">sale</field>
+        </record>
+        -->
+
+    </data>
+</openerp>
