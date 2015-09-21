@@ -1,0 +1,110 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_fi_rapko
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-20150601\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-21 12:29+0000\n"
+"PO-Revision-Date: 2015-09-21 15:31+0200\n"
+"Last-Translator: Miku Laitinen <miku.laitinen@avoin.systems>\n"
+"Language-Team: Avoin.Systems <miku@avoin.systems>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: Finnish\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#. module: l10n_fi_rapko
+#: model:ir.model,name:l10n_fi_rapko.model_account_fiscal_position_account
+msgid "Accounts Fiscal Position"
+msgstr ""
+
+#. module: l10n_fi_rapko
+#: help:account.fiscal.position.template,country_group_id:0
+msgid ""
+"Apply when the shipping or invoicing country is in this country group, and "
+"no position matches the country directly."
+msgstr ""
+
+#. module: l10n_fi_rapko
+#: help:account.fiscal.position.template,country_id:0
+msgid ""
+"Apply when the shipping or invoicing country matches. Takes precedence over "
+"positions matching on a country group."
+msgstr ""
+
+#. module: l10n_fi_rapko
+#: field:account.fiscal.position.template,country_id:0
+msgid "Country"
+msgstr "Maa"
+
+#. module: l10n_fi_rapko
+#: field:account.fiscal.position.template,country_group_id:0
+msgid "Country Group"
+msgstr "Maaryhmä"
+
+#. module: l10n_fi_rapko
+#: model:ir.model,name:l10n_fi_rapko.model_account_fiscal_position
+msgid "Fiscal Position"
+msgstr ""
+
+#. module: l10n_fi_rapko
+#: selection:account.fiscal.position.account,product_type:0
+#: selection:account.fiscal.position.account.template,product_type:0
+#: selection:account.fiscal.position.tax,product_type:0
+#: selection:account.fiscal.position.tax.template,product_type:0
+msgid "Goods"
+msgstr "Tavara"
+
+#. module: l10n_fi_rapko
+#: field:account.fiscal.position.account,product_type:0
+#: field:account.fiscal.position.account.template,product_type:0
+#: field:account.fiscal.position.tax,product_type:0
+#: field:account.fiscal.position.tax.template,product_type:0
+msgid "Product Type"
+msgstr "Tuotteen tyyppi"
+
+#. module: l10n_fi_rapko
+#: selection:account.fiscal.position.account,product_type:0
+#: selection:account.fiscal.position.account.template,product_type:0
+#: selection:account.fiscal.position.tax,product_type:0
+#: selection:account.fiscal.position.tax.template,product_type:0
+msgid "Service"
+msgstr "Palvelu"
+
+#. module: l10n_fi_rapko
+#: model:ir.model,name:l10n_fi_rapko.model_account_fiscal_position_tax
+msgid "Taxes Fiscal Position"
+msgstr ""
+
+#. module: l10n_fi_rapko
+#: model:ir.model,name:l10n_fi_rapko.model_account_fiscal_position_account_template
+msgid "Template Account Fiscal Mapping"
+msgstr ""
+
+#. module: l10n_fi_rapko
+#: model:ir.model,name:l10n_fi_rapko.model_account_fiscal_position_tax_template
+msgid "Template Tax Fiscal Position"
+msgstr ""
+
+#. module: l10n_fi_rapko
+#: model:ir.model,name:l10n_fi_rapko.model_account_fiscal_position_template
+msgid "Template for Fiscal Position"
+msgstr ""
+
+#. module: l10n_fi_rapko
+#: help:account.fiscal.position.account,product_type:0
+#: help:account.fiscal.position.account.template,product_type:0
+#: help:account.fiscal.position.tax,product_type:0
+#: help:account.fiscal.position.tax.template,product_type:0
+msgid "The product type this rule only applies to."
+msgstr "Tuotetyyppi, johon tämä sääntö pätee."
+
+#. module: l10n_fi_rapko
+#: view:account.invoice:l10n_fi_rapko.invoice_form_rapko
+#: view:account.invoice:l10n_fi_rapko.invoice_supplier_form_rapko
+msgid "{'product': product_id}"
+msgstr ""
