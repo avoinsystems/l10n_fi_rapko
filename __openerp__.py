@@ -22,7 +22,7 @@
 {
     "name": "Finland - Accounting (Raportointikoodisto)",
     "category": "Localization/Account Charts",
-    "version": "1.0",
+    "version": "1.0.1",
     "description": """
     Finnish chart of accounts and value added taxes.
 

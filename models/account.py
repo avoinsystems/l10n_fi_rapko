@@ -95,6 +95,8 @@ class FiscalPosition(models.Model):
     def map_account(self, cr, uid, fposition_id, account_id, context=None):
         if not fposition_id:
             return account_id
+        if context is None:
+            context = {}
 
         product_id = context.get('product', False)
         product = self.pool.get('product.product')\
@@ -128,6 +130,8 @@ class FiscalPosition(models.Model):
             return []
         if not fposition_id:
             return map(lambda x: x.id, taxes)
+        if context is None:
+            context = {}
 
         product_id = context.get('product', False)
         product = self.pool.get('product.product')\
