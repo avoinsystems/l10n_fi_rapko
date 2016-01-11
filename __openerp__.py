@@ -22,7 +22,8 @@
 {
     "name": "Finland - Accounting (Raportointikoodisto)",
     "category": "Localization/Account Charts",
-    "version": "1.0.1",
+    "version": "1.0.2",
+    "license": "AGPL-3",
     "description": """
     Finnish chart of accounts and value added taxes.
 
@@ -38,7 +39,6 @@
     "depends": [
         "account",
         "account_chart",
-        "base_vat"
     ],
     "data": [
         "data/tax_codes.xml",
