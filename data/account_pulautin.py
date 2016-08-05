@@ -3,6 +3,7 @@
 from lxml import etree
 import copy
 
+# user_type_id conversion dict
 type_map = {
     'account.data_account_type_expense': 'account.data_account_type_expenses',
     'account.data_account_type_receivable': 'account.data_account_type_receivable',
@@ -15,7 +16,7 @@ type_map = {
 
 
 def parse_record(rec):
-    # user_type_id conversion dict
+    # Todo: views -> tags
 
     f_name = None
     f_code = None
