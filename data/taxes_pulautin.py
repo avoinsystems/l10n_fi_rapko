@@ -10,6 +10,13 @@ def parse_rec(rec):
         name = field.get('name')
         if name == 'type':
             field.set('name', 'amount_type')
+            if field.text == 'none':
+                field.text = 'fixed'
+                amount = etree.Element('field', attrib={'name': 'amount'})
+                amount.text = '0'
+                rec.insert(-1, amount)
+            elif field.text == 'balance':
+                field.text = 'division'
         elif name == 'account_collected_id':
             rec.remove(field)
         elif name == 'account_paid_id':
@@ -17,6 +24,15 @@ def parse_rec(rec):
         elif name in ['base_code_id', 'tax_code_id', 'ref_tax_code_id', 'ref_base_code_id']:
             rec.remove(field)
             # Todo: use tags
+    has_amount = False
+    for field in rec.findall('field'):
+        if field.get('name') == 'amount':
+            has_amount = True
+            break
+    if not has_amount:
+        amount = etree.Element('field', attrib={'name': 'amount'})
+        amount.text = 'fixme'
+        rec.insert(-1, amount)
 
 
 def parse():

@@ -35,8 +35,8 @@
             <field name="sequence">34</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="name">VAT 0 % Export</field>
-            <field name="amount_type">none</field>
-            <field name="type_tax_use">sale</field>
+            <field name="amount_type">fixed</field>
+            <field name="amount">0</field><field name="type_tax_use">sale</field>
         </record>
 
         <record id="purchase_vat24" model="account.tax.template">
@@ -76,12 +76,12 @@
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YTO 24 %</field>
             <field name="name">VAT 24 %, Goods</field>
-            <field name="amount_type">balance</field>
+            <field name="amount_type">division</field>
             <field name="applicable_type">code</field>
             <field name="python_applicable">result = product.type != 'service'
             </field>
             <field name="child_depend" eval="True"/>
-            <field name="type_tax_use">purchase</field>
+            <field name="amount">0.24</field><field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_goods_24_carry" model="account.tax.template">
             <field name="parent_id" ref="purchase_vat_ic_goods_24"/>
@@ -118,12 +118,12 @@
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YTO 14 %</field>
             <field name="name">VAT 14 %, Goods</field>
-            <field name="amount_type">balance</field>
+            <field name="amount_type">division</field>
             <field name="applicable_type">code</field>
             <field name="python_applicable">result = product.type != 'service'
             </field>
             <field name="child_depend" eval="True"/>
-            <field name="type_tax_use">purchase</field>
+            <field name="amount">0.14</field><field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_goods_14_carry" model="account.tax.template">
             <field name="parent_id" ref="purchase_vat_ic_goods_14"/>
@@ -160,12 +160,12 @@
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YTO 10 %</field>
             <field name="name">VAT 10 %, Goods</field>
-            <field name="amount_type">balance</field>
+            <field name="amount_type">division</field>
             <field name="applicable_type">code</field>
             <field name="python_applicable">result = product.type != 'service'
             </field>
             <field name="child_depend" eval="True"/>
-            <field name="type_tax_use">purchase</field>
+            <field name="amount">0.10</field><field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_goods_10_carry" model="account.tax.template">
             <field name="parent_id" ref="purchase_vat_ic_goods_10"/>
@@ -202,12 +202,12 @@
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YPO 24 %</field>
             <field name="name">VAT 24 %, Services</field>
-            <field name="amount_type">balance</field>
+            <field name="amount_type">division</field>
             <field name="applicable_type">code</field>
             <field name="python_applicable">result = product.type == 'service'
             </field>
             <field name="child_depend" eval="True"/>
-            <field name="type_tax_use">purchase</field>
+            <field name="amount">0.24</field><field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_services_24_carry" model="account.tax.template">
             <field name="parent_id" ref="purchase_vat_ic_services_24"/>
@@ -244,12 +244,12 @@
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YPO 14 %</field>
             <field name="name">VAT 14 %, Services</field>
-            <field name="amount_type">balance</field>
+            <field name="amount_type">division</field>
             <field name="applicable_type">code</field>
             <field name="python_applicable">result = product.type == 'service'
             </field>
             <field name="child_depend" eval="True"/>
-            <field name="type_tax_use">purchase</field>
+            <field name="amount">0.14</field><field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_services_14_carry" model="account.tax.template">
             <field name="parent_id" ref="purchase_vat_ic_services_14"/>
@@ -286,12 +286,12 @@
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YPO 10 %</field>
             <field name="name">VAT 10 %, Services</field>
-            <field name="amount_type">balance</field>
+            <field name="amount_type">division</field>
             <field name="applicable_type">code</field>
             <field name="python_applicable">result = product.type == 'service'
             </field>
             <field name="child_depend" eval="True"/>
-            <field name="type_tax_use">purchase</field>
+            <field name="amount">0.10</field><field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_services_10_carry" model="account.tax.template">
             <field name="parent_id" ref="purchase_vat_ic_services_10"/>
@@ -329,13 +329,13 @@
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YTM 0 %</field>
             <field name="name">VAT 0 %, Goods (Intra-Community Supply)</field>
-            <field name="amount_type">none</field>
+            <field name="amount_type">fixed</field>
             <field name="applicable_type">code</field>
             <field name="python_applicable">result = product.type != 'service'
             </field>
             <field name="ref_base_sign">-1</field>
             <field name="ref_tax_sign">-1</field>
-            <field name="type_tax_use">sale</field>
+            <field name="amount">0</field><field name="type_tax_use">sale</field>
         </record>
         
         <!-- EU Sales Services -->
@@ -344,13 +344,13 @@
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="description">YPM 0 %</field>
             <field name="name">VAT 0 %, Services (Intra-Community Supply)</field>
-            <field name="amount_type">none</field>
+            <field name="amount_type">fixed</field>
             <field name="applicable_type">code</field>
             <field name="python_applicable">result = product.type == 'service'
             </field>
             <field name="ref_base_sign">-1</field>
             <field name="ref_tax_sign">-1</field>
-            <field name="type_tax_use">sale</field>
+            <field name="amount">0</field><field name="type_tax_use">sale</field>
         </record>
 
 

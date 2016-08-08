@@ -1,5 +1,10 @@
 <openerp>
     <data noupdate="0">
+        <record model="account.account.template" id="a10666">
+            <field name="code">10666</field>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="name">Placeholder thingy</field>
+        </record>
         <record model="account.account.template" id="a10002">
             <field name="code">10002</field>
             <field name="user_type_id" ref="account.data_account_type_current_assets"/>
