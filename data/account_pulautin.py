@@ -21,7 +21,12 @@ def parse_record(rec):
     f_name = None
     f_code = None
     f_user_type_id = None
-
+    f_chart_template = etree.Element('field')
+    f_chart_template.attrib['name'] = 'chart_template_id'
+    f_chart_template.attrib['ref'] = 'chart_template_fi_rapko'
+    f_reconcile = etree.Element('field')
+    f_reconcile.attrib['name'] = 'reconcile'
+    f_reconcile.attrib['eval'] = 'False'
     for field in rec.findall('field'):
         if field.get('name') == 'type' and field.text == 'view':
             return None
@@ -35,10 +40,16 @@ def parse_record(rec):
             f_user_type_id = copy.deepcopy(field)
             f_user_type_id.attrib['name'] = 'user_type_id'
             f_user_type_id.attrib['ref'] = type_map[field.attrib['ref']]
+            if f_user_type_id.attrib['ref'] in ['account.data_account_type_receivable',
+                                                'account.data_account_type_payable']:
+                f_reconcile.attrib['eval'] = 'True'
+
     new_rec = etree.Element(rec.tag, attrib=rec.attrib)
     new_rec.insert(-1, f_name)
     new_rec.insert(-1, f_code)
     new_rec.insert(-1, f_user_type_id)
+    new_rec.insert(-1, f_chart_template)
+    new_rec.insert(-1, f_reconcile)
     return new_rec
 
 

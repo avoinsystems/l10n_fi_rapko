@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
+
+        <menuitem id="account_reports_fi_rapko_statements_menu"
+                  name="Finnish Statements (RapKo)"
+                  parent="account.menu_finance_reports"
+                  sequence="3" groups="account.group_account_user"/>
+
         <record model="account.account.template" id="a10666">
             <field name="code">10666</field>
             <field name="user_type_id" ref="account.data_account_type_current_assets"/>
             <field name="name">Placeholder thingy</field>
         </record>
+
+        <!-- Account Chart Template -->
 
         <record id="chart_template_fi_rapko" model="account.chart.template">
             <field name="name">Finnish Chart of Accounts (Raportointikoodisto)</field>
@@ -29,5 +37,7 @@
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
         </record>
 
+        <!-- Account Templates -->
+        <!-- Todo: add here when ready -->
     </data>
 </openerp>

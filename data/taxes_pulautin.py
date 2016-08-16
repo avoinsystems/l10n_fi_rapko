@@ -8,7 +8,9 @@ def parse_rec(rec):
     print(rec.tag + ' ' + rec.get('id'))
     for field in rec.findall('field'):
         name = field.get('name')
-        if name == 'type':
+        if name == 'amount':
+            field.text = str(float(field.text)*100.0)
+        elif name == 'type':
             field.set('name', 'amount_type')
             if field.text == 'none':
                 field.text = 'fixed'
@@ -18,9 +20,9 @@ def parse_rec(rec):
             elif field.text == 'balance':
                 field.text = 'division'
         elif name == 'account_collected_id':
-            rec.remove(field)
-        elif name == 'account_paid_id':
             field.set('name', 'account_id')
+        elif name == 'account_paid_id':
+            field.set('name', 'refund_id')
         elif name in ['base_code_id', 'tax_code_id', 'ref_tax_code_id', 'ref_base_code_id']:
             rec.remove(field)
             # Todo: use tags
