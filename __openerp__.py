@@ -45,6 +45,8 @@
         # "data/chart_of_accounts.xml",
         "data/account_chart.xml",
         "data/new_accounts.xml",
+        #"data/chart_of_accounts.xml",
+        "data/account_chart_template.yml",
         "data/new_taxes.xml",
         "data/fiscal_positions.xml",
         "data/account_chart_template.yml",

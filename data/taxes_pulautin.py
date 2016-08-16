@@ -31,10 +31,12 @@ def parse_rec(rec):
         if field.get('name') == 'amount':
             has_amount = True
             break
+    '''
     if not has_amount:
         amount = etree.Element('field', attrib={'name': 'amount'})
         amount.text = 'fixme'
         rec.insert(-1, amount)
+    '''
 
 
 def parse():

@@ -87,7 +87,7 @@
             <field name="python_applicable">result = product.type != 'service'
             </field>
             <field name="child_depend" eval="True"/>
-            <field name="amount">fixme</field><field name="type_tax_use">purchase</field>
+            <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_goods_24_carry" model="account.tax.template">
             <field name="parent_id" ref="purchase_vat_ic_goods_24"/>
@@ -131,7 +131,7 @@
             <field name="python_applicable">result = product.type != 'service'
             </field>
             <field name="child_depend" eval="True"/>
-            <field name="amount">fixme</field><field name="type_tax_use">purchase</field>
+            <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_goods_14_carry" model="account.tax.template">
             <field name="parent_id" ref="purchase_vat_ic_goods_14"/>
@@ -175,7 +175,7 @@
             <field name="python_applicable">result = product.type != 'service'
             </field>
             <field name="child_depend" eval="True"/>
-            <field name="amount">fixme</field><field name="type_tax_use">purchase</field>
+            <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_goods_10_carry" model="account.tax.template">
             <field name="parent_id" ref="purchase_vat_ic_goods_10"/>
@@ -219,7 +219,7 @@
             <field name="python_applicable">result = product.type == 'service'
             </field>
             <field name="child_depend" eval="True"/>
-            <field name="amount">fixme</field><field name="type_tax_use">purchase</field>
+            <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_services_24_carry" model="account.tax.template">
             <field name="parent_id" ref="purchase_vat_ic_services_24"/>
@@ -263,7 +263,7 @@
             <field name="python_applicable">result = product.type == 'service'
             </field>
             <field name="child_depend" eval="True"/>
-            <field name="amount">fixme</field><field name="type_tax_use">purchase</field>
+            <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_services_14_carry" model="account.tax.template">
             <field name="parent_id" ref="purchase_vat_ic_services_14"/>
@@ -307,7 +307,7 @@
             <field name="python_applicable">result = product.type == 'service'
             </field>
             <field name="child_depend" eval="True"/>
-            <field name="amount">fixme</field><field name="type_tax_use">purchase</field>
+            <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_services_10_carry" model="account.tax.template">
             <field name="parent_id" ref="purchase_vat_ic_services_10"/>
