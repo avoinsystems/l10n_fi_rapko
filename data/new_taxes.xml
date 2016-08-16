@@ -9,6 +9,7 @@
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a291141"/>
             <field name="refund_id" ref="a291141"/>
+            <field name="tag_ids" eval="[(6,0,[ref('tax_code_base_sales_24'),ref('tax_code_taxes_sale_24')])]"/>
             <field name="type_tax_use">sale</field>
         </record>
 
@@ -20,6 +21,7 @@
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a291142"/>
             <field name="refund_id" ref="a291142"/>
+            <field name="tag_ids" eval="[(6,0,[ref('tax_code_base_sales_14'),ref('tax_code_taxes_sale_14')])]"/>
             <field name="type_tax_use">sale</field>
         </record>
 
@@ -31,6 +33,7 @@
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a291143"/>
             <field name="refund_id" ref="a291143"/>
+            <field name="tag_ids" eval="[(6,0,[ref('tax_code_base_sales_10'),ref('tax_code_taxes_sale_10')])]"/>
             <field name="type_tax_use">sale</field>
         </record>
 
@@ -39,7 +42,9 @@
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="name">VAT 0 % Export</field>
             <field name="amount_type">fixed</field>
-            <field name="amount">0</field><field name="type_tax_use">sale</field>
+            <field name="amount">0</field>
+            <field name="tag_ids" eval="[(6,0,[ref('tax_code_base_sales_non_ic')])]"/>
+            <field name="type_tax_use">sale</field>
         </record>
 
         <record id="purchase_vat24" model="account.tax.template">
@@ -50,6 +55,7 @@
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a1762"/>
             <field name="refund_id" ref="a1762"/>
+            <field name="tag_ids" eval="[(6,0,[ref('tax_code_deductible_24'),ref('tax_code_base_purchase_24')])]"/>
             <field name="type_tax_use">purchase</field>
         </record>
 
@@ -61,6 +67,7 @@
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a1762"/>
             <field name="refund_id" ref="a1762"/>
+            <field name="tag_ids" eval="[(6,0,[ref('tax_code_deductible_14'),ref('tax_code_base_purchase_14')])]"/>
             <field name="type_tax_use">purchase</field>
         </record>
 
@@ -72,9 +79,10 @@
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a1762"/>
             <field name="refund_id" ref="a1762"/>
+            <field name="tag_ids" eval="[(6,0,[ref('tax_code_base_purchase_10'),ref('tax_code_deductible_10')])]"/>
             <field name="type_tax_use">purchase</field>
         </record>
-        
+
         <!-- EU PURCHASE -->
         <!-- EU Purchase Goods 24 % -->
         <record id="purchase_vat_ic_goods_24" model="account.tax.template">
@@ -87,6 +95,7 @@
             <field name="python_applicable">result = product.type != 'service'
             </field>
             <field name="child_depend" eval="True"/>
+            <field name="amount">0</field>
             <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_goods_24_carry" model="account.tax.template">
@@ -102,6 +111,8 @@
             <field name="refund_id" ref="a291145"/>
             <field name="ref_base_sign">-1</field>
             <field name="ref_tax_sign">-1</field>
+            <field name="tag_ids"
+                   eval="[(6,0,[ref('tax_code_purchase_ic_goods'),ref('tax_code_taxes_purchase_ic_goods')])]"/>
             <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_goods_24_deduct" model="account.tax.template">
@@ -117,9 +128,10 @@
             <field name="refund_id" ref="a291151"/>
             <field name="ref_base_sign">-1</field>
             <field name="ref_tax_sign">-1</field>
+            <field name="tag_ids" eval="[(6,0,[ref('tax_code_deductible_ic')])]"/>
             <field name="type_tax_use">purchase</field>
         </record>
-        
+
         <!-- EU Purchase Goods 14 % -->
         <record id="purchase_vat_ic_goods_14" model="account.tax.template">
             <field name="sequence">80</field>
@@ -131,6 +143,7 @@
             <field name="python_applicable">result = product.type != 'service'
             </field>
             <field name="child_depend" eval="True"/>
+            <field name="amount">0</field>
             <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_goods_14_carry" model="account.tax.template">
@@ -146,6 +159,8 @@
             <field name="refund_id" ref="a291145"/>
             <field name="ref_base_sign">-1</field>
             <field name="ref_tax_sign">-1</field>
+            <field name="tag_ids"
+                   eval="[(6,0,[ref('tax_code_purchase_ic_goods'),ref('tax_code_taxes_purchase_ic_goods')])]"/>
             <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_goods_14_deduct" model="account.tax.template">
@@ -161,9 +176,10 @@
             <field name="refund_id" ref="a291151"/>
             <field name="ref_base_sign">-1</field>
             <field name="ref_tax_sign">-1</field>
+            <field name="tag_ids" eval="[(6,0,[ref('tax_code_deductible_ic')])]"/>
             <field name="type_tax_use">purchase</field>
         </record>
-        
+
         <!-- EU Purchase Goods 10 % -->
         <record id="purchase_vat_ic_goods_10" model="account.tax.template">
             <field name="sequence">90</field>
@@ -175,6 +191,7 @@
             <field name="python_applicable">result = product.type != 'service'
             </field>
             <field name="child_depend" eval="True"/>
+            <field name="amount">0</field>
             <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_goods_10_carry" model="account.tax.template">
@@ -190,6 +207,8 @@
             <field name="refund_id" ref="a291145"/>
             <field name="ref_base_sign">-1</field>
             <field name="ref_tax_sign">-1</field>
+            <field name="tag_ids"
+                   eval="[(6,0,[ref('tax_code_purchase_ic_goods'),ref('tax_code_taxes_purchase_ic_goods')])]"/>
             <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_goods_10_deduct" model="account.tax.template">
@@ -205,6 +224,7 @@
             <field name="refund_id" ref="a291151"/>
             <field name="ref_base_sign">-1</field>
             <field name="ref_tax_sign">-1</field>
+            <field name="tag_ids" eval="[(6,0,[ref('tax_code_deductible_ic')])]"/>
             <field name="type_tax_use">purchase</field>
         </record>
 
@@ -219,6 +239,7 @@
             <field name="python_applicable">result = product.type == 'service'
             </field>
             <field name="child_depend" eval="True"/>
+            <field name="amount">0</field>
             <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_services_24_carry" model="account.tax.template">
@@ -234,6 +255,8 @@
             <field name="refund_id" ref="a291146"/>
             <field name="ref_base_sign">-1</field>
             <field name="ref_tax_sign">-1</field>
+            <field name="tag_ids"
+                   eval="[(6,0,[ref('tax_code_purchase_ic_services'),ref('tax_code_taxes_purchase_ic_services')])]"/>
             <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_services_24_deduct" model="account.tax.template">
@@ -249,9 +272,10 @@
             <field name="refund_id" ref="a291151"/>
             <field name="ref_base_sign">-1</field>
             <field name="ref_tax_sign">-1</field>
+            <field name="tag_ids" eval="[(6,0,[ref('tax_code_deductible_ic')])]"/>
             <field name="type_tax_use">purchase</field>
         </record>
-        
+
         <!-- EU Purchase Services 14 % -->
         <record id="purchase_vat_ic_services_14" model="account.tax.template">
             <field name="sequence">110</field>
@@ -263,6 +287,7 @@
             <field name="python_applicable">result = product.type == 'service'
             </field>
             <field name="child_depend" eval="True"/>
+            <field name="amount">0</field>
             <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_services_14_carry" model="account.tax.template">
@@ -278,6 +303,8 @@
             <field name="refund_id" ref="a291146"/>
             <field name="ref_base_sign">-1</field>
             <field name="ref_tax_sign">-1</field>
+            <field name="tag_ids"
+                   eval="[(6,0,[ref('tax_code_purchase_ic_services'),ref('tax_code_taxes_purchase_ic_services')])]"/>
             <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_services_14_deduct" model="account.tax.template">
@@ -293,9 +320,10 @@
             <field name="refund_id" ref="a291151"/>
             <field name="ref_base_sign">-1</field>
             <field name="ref_tax_sign">-1</field>
+            <field name="tag_ids" eval="[(6,0,[ref('tax_code_deductible_ic')])]"/>
             <field name="type_tax_use">purchase</field>
         </record>
-        
+
         <!-- EU Purchase Services 10 % -->
         <record id="purchase_vat_ic_services_10" model="account.tax.template">
             <field name="sequence">120</field>
@@ -307,6 +335,7 @@
             <field name="python_applicable">result = product.type == 'service'
             </field>
             <field name="child_depend" eval="True"/>
+            <field name="amount">0</field>
             <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_services_10_carry" model="account.tax.template">
@@ -322,6 +351,8 @@
             <field name="refund_id" ref="a291146"/>
             <field name="ref_base_sign">-1</field>
             <field name="ref_tax_sign">-1</field>
+            <field name="tag_ids"
+                   eval="[(6,0,[ref('tax_code_purchase_ic_services'),ref('tax_code_taxes_purchase_ic_services')])]"/>
             <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat_ic_services_10_deduct" model="account.tax.template">
@@ -337,9 +368,10 @@
             <field name="refund_id" ref="a291151"/>
             <field name="ref_base_sign">-1</field>
             <field name="ref_tax_sign">-1</field>
+            <field name="tag_ids" eval="[(6,0,[ref('tax_code_deductible_ic')])]"/>
             <field name="type_tax_use">purchase</field>
         </record>
-        
+
         <!-- EU SALES -->
         <!-- EU Sales Goods -->
         <record id="sales_vat_ic_goods" model="account.tax.template">
@@ -353,9 +385,11 @@
             </field>
             <field name="ref_base_sign">-1</field>
             <field name="ref_tax_sign">-1</field>
-            <field name="amount">0</field><field name="type_tax_use">sale</field>
+            <field name="amount">0</field>
+            <field name="tag_ids" eval="[(6,0,[ref('tax_code_sales_ic_goods')])]"/>
+            <field name="type_tax_use">sale</field>
         </record>
-        
+
         <!-- EU Sales Services -->
         <record id="sales_vat_ic_services" model="account.tax.template">
             <field name="sequence">140</field>
@@ -368,7 +402,9 @@
             </field>
             <field name="ref_base_sign">-1</field>
             <field name="ref_tax_sign">-1</field>
-            <field name="amount">0</field><field name="type_tax_use">sale</field>
+            <field name="amount">0</field>
+            <field name="tag_ids" eval="[(6,0,[ref('tax_code_sales_ic_services')])]"/>
+            <field name="type_tax_use">sale</field>
         </record>
 
 
