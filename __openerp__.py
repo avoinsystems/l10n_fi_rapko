@@ -21,7 +21,7 @@
 # noinspection PyStatementEffect
 {
     "name": "Finland - Accounting (Raportointikoodisto)",
-    "category": "Localization/Account Charts",
+    "category": "Localization",
     "version": "1.0.2",
     "license": "AGPL-3",
     "description": """
