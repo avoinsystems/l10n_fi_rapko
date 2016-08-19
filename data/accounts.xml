@@ -2545,6 +2545,7 @@
             <field name="user_type" ref="account.data_account_type_receivable"/>
             <field name="parent_id" ref="a191"/>
         </record>
+        <!-- Siirretty -> account_chart.xml
         <record model="account.account.template" id="a19190">
             <field name="name">Rahansiirrot/ v&#228;litilit/ t&#228;sm&#228;ytykset</field>
             <field name="code">19190</field>
@@ -2552,6 +2553,7 @@
             <field name="user_type" ref="account.data_account_type_receivable"/>
             <field name="parent_id" ref="a191"/>
         </record>
+        -->
         <record model="account.account.template" id="a02">
             <field name="name">TASE VASTATTAVAA</field>
             <field name="code">02</field>
