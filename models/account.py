@@ -20,14 +20,6 @@
 from openerp import api, fields, models
 
 
-class AccountMoveLine(models.Model):
-    _inherit = 'account.move.line'
-
-    @api.model
-    def _query_get(self, domain=None):
-        return super(AccountMoveLine, self)._query_get(domain)
-
-
 class AccountTaxTemplate(models.Model):
     _inherit = 'account.tax.template'
 
