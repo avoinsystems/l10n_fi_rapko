@@ -29,6 +29,7 @@
             <field name="amount_type">percent</field>
             <field name="amount">10.0</field>
             <field name="account_id" ref="a291151"/>
+            <field name="refund_account_id" ref="a291151"/>
             <field name="tag_ids" eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_deductible_tag')])]"/>
             <field name="type_tax_use">purchase</field>
         </record>
@@ -40,6 +41,7 @@
             <field name="amount_type">percent</field>
             <field name="amount">-10.0</field>
             <field name="account_id" ref="a291146"/>
+            <field name="refund_account_id" ref="a291146"/>
             <field name="tag_ids"
                    eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_purchase_ic_services_tag'),ref('tax_code_taxes_purchase_ic_services_tag')])]"/>
             <field name="type_tax_use">purchase</field>
@@ -63,6 +65,7 @@
             <field name="amount_type">percent</field>
             <field name="amount">14.0</field>
             <field name="account_id" ref="a291151"/>
+            <field name="refund_account_id" ref="a291151"/>
             <field name="tag_ids" eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_deductible_tag')])]"/>
             <field name="type_tax_use">purchase</field>
         </record>
@@ -74,6 +77,7 @@
             <field name="amount_type">percent</field>
             <field name="amount">-14.0</field>
             <field name="account_id" ref="a291146"/>
+            <field name="refund_account_id" ref="a291146"/>
             <field name="tag_ids"
                    eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_purchase_ic_services_tag'),ref('tax_code_taxes_purchase_ic_services_tag')])]"/>
             <field name="type_tax_use">purchase</field>
@@ -97,6 +101,7 @@
             <field name="amount_type">percent</field>
             <field name="amount">24.0</field>
             <field name="account_id" ref="a291151"/>
+            <field name="refund_account_id" ref="a291151"/>
             <field name="tag_ids" eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_deductible_tag')])]"/>
             <field name="type_tax_use">purchase</field>
         </record>
@@ -108,6 +113,7 @@
             <field name="amount_type">percent</field>
             <field name="amount">-24.0</field>
             <field name="account_id" ref="a291146"/>
+            <field name="refund_account_id" ref="a291146"/>
             <field name="tag_ids"
                    eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_purchase_ic_services_tag'),ref('tax_code_taxes_purchase_ic_services_tag')])]"/>
             <field name="type_tax_use">purchase</field>
@@ -131,6 +137,7 @@
             <field name="amount_type">percent</field>
             <field name="amount">10.0</field>
             <field name="account_id" ref="a291151"/>
+            <field name="refund_account_id" ref="a291151"/>
             <field name="tag_ids" eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_deductible_tag')])]"/>
             <field name="type_tax_use">purchase</field>
         </record>
@@ -142,6 +149,7 @@
             <field name="amount_type">percent</field>
             <field name="amount">-10.0</field>
             <field name="account_id" ref="a291145"/>
+            <field name="refund_account_id" ref="a291145"/>
             <field name="tag_ids"
                    eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_purchase_ic_goods_tag'),ref('tax_code_taxes_purchase_ic_goods_tag')])]"/>
             <field name="type_tax_use">purchase</field>
@@ -165,6 +173,7 @@
             <field name="amount_type">percent</field>
             <field name="amount">14.0</field>
             <field name="account_id" ref="a291151"/>
+            <field name="refund_account_id" ref="a291151"/>
             <field name="tag_ids" eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_deductible_tag')])]"/>
             <field name="type_tax_use">purchase</field>
         </record>
@@ -176,7 +185,7 @@
             <field name="amount_type">percent</field>
             <field name="amount">-14.0</field>
             <field name="account_id" ref="a291145"/>
-
+            <field name="refund_account_id" ref="a291145"/>
             <field name="tag_ids"
                    eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_purchase_ic_goods_tag'),ref('tax_code_taxes_purchase_ic_goods_tag')])]"/>
             <field name="type_tax_use">purchase</field>
@@ -200,6 +209,7 @@
             <field name="amount_type">percent</field>
             <field name="amount">24.0</field>
             <field name="account_id" ref="a291151"/>
+            <field name="refund_account_id" ref="a291151"/>
             <field name="tag_ids" eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_deductible_tag')])]"/>
             <field name="type_tax_use">purchase</field>
         </record>
@@ -211,6 +221,7 @@
             <field name="amount_type">percent</field>
             <field name="amount">-24.0</field>
             <field name="account_id" ref="a291145"/>
+            <field name="refund_account_id" ref="a291145"/>
             <field name="tag_ids"
                    eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_purchase_ic_goods_tag'),ref('tax_code_taxes_purchase_ic_goods_tag')])]"/>
             <field name="type_tax_use">purchase</field>
@@ -233,6 +244,7 @@
             <field name="amount">10.0</field>
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a1762"/>
+            <field name="refund_account_id" ref="a1762"/>
             <field name="tag_ids"
                    eval="[(6,0,[ref('tax_code_deductible_tag'),ref('tax_code_pay_deduct_tag')])]"/>
             <field name="type_tax_use">purchase</field>
@@ -244,6 +256,7 @@
             <field name="amount">14.0</field>
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a1762"/>
+            <field name="refund_account_id" ref="a1762"/>
             <field name="tag_ids"
                    eval="[(6,0,[ref('tax_code_deductible_tag'),ref('tax_code_pay_deduct_tag')])]"/>
             <field name="type_tax_use">purchase</field>
@@ -255,6 +268,7 @@
             <field name="amount">24.0</field>
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a1762"/>
+            <field name="refund_account_id" ref="a1762"/>
             <field name="tag_ids"
                    eval="[(6,0,[ref('tax_code_deductible_tag'),ref('tax_code_pay_deduct_tag')])]"/>
             <field name="type_tax_use">purchase</field>
@@ -275,6 +289,7 @@
             <field name="amount">10.0</field>
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a291143"/>
+            <field name="refund_account_id" ref="a291143"/>
             <field name="tag_ids" eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_taxes_sale_10_tag')])]"/>
             <field name="type_tax_use">sale</field>
             <field name="price_include">true</field>
@@ -286,6 +301,7 @@
             <field name="amount">10.0</field>
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a291143"/>
+            <field name="refund_account_id" ref="a291143"/>
             <field name="tag_ids" eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_taxes_sale_10_tag')])]"/>
             <field name="type_tax_use">sale</field>
         </record>
@@ -297,6 +313,7 @@
             <field name="amount">14.0</field>
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a291142"/>
+            <field name="refund_account_id" ref="a291142"/>
             <field name="tag_ids" eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_taxes_sale_14_tag')])]"/>
             <field name="type_tax_use">sale</field>
             <field name="price_include">true</field>
@@ -308,6 +325,7 @@
             <field name="amount">14.0</field>
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a291142"/>
+            <field name="refund_account_id" ref="a291142"/>
             <field name="tag_ids" eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_taxes_sale_14_tag')])]"/>
             <field name="type_tax_use">sale</field>
         </record>
@@ -318,6 +336,7 @@
             <field name="amount">24.0</field>
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a291141"/>
+            <field name="refund_account_id" ref="a291141"/>
             <field name="tag_ids" eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_taxes_sale_24_tag')])]"/>
             <field name="type_tax_use">sale</field>
             <field name="price_include">true</field>
@@ -329,6 +348,7 @@
             <field name="amount">24.0</field>
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a291141"/>
+            <field name="refund_account_id" ref="a291141"/>
             <field name="tag_ids" eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_taxes_sale_24_tag')])]"/>
             <field name="type_tax_use">sale</field>
         </record>
