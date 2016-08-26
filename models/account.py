@@ -78,6 +78,17 @@ class FiscalPositionTaxTemplate(models.Model):
 
 class FiscalPosition(models.Model):
     _inherit = 'account.fiscal.position'
+    '''
+    product_type = fields.Selection(
+        [
+            ('service', 'Service'),
+            ('goods', 'Goods')
+        ],
+        string='Product Type',
+        required=False,
+        help='The product type this rule only applies to.'
+    )
+    '''
 
     # noinspection PyMethodMayBeStatic
     def _applies_to_mapping(self, product, mapping):

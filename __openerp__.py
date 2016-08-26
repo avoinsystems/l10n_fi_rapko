@@ -21,8 +21,8 @@
 # noinspection PyStatementEffect
 {
     "name": "Finland - Accounting (Raportointikoodisto)",
-    "category": "Localization/Account Charts",
-    "version": "1.0.2",
+    "category": "Localization",
+    "version": "1.0.0",
     "license": "AGPL-3",
     "description": """
     Finnish chart of accounts and value added taxes.
@@ -38,16 +38,17 @@
     "website": "https://github.com/avoinsystems/l10n_fi_rapko",
     "depends": [
         "account",
-        "account_chart",
     ],
     "data": [
-        "data/tax_codes.xml",
+        "data/account_chart_template.xml",
         "data/accounts.xml",
-        "data/chart_of_accounts.xml",
+        "data/tax_tags.xml",
         "data/taxes.xml",
         "data/fiscal_positions.xml",
+        "data/account_chart_template.yml",
         "views/fiscal_position.xml",
         "views/invoice.xml",
+        "data/account_chart_template.yml",  # Load / evaluate this last
     ],
     "active": False,
     "installable": True,
