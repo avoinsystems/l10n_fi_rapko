@@ -22,7 +22,7 @@
 {
     "name": "Finland - Accounting (Raportointikoodisto)",
     "category": "Localization",
-    "version": "1.0.2",
+    "version": "1.0.0",
     "license": "AGPL-3",
     "description": """
     Finnish chart of accounts and value added taxes.
