@@ -102,26 +102,7 @@ class FiscalPosition(models.Model):
 
         return False
 
-    @api.v7
-    def map_account(self, cr, uid, fposition_id, account_id, context=None):
-        if not fposition_id:
-            return account_id
-        if context is None:
-            context = {}
-
-        product_id = context.get('product', False)
-        product = self.pool.get('product.product')\
-            .browse(cr, uid, product_id, context) \
-            if product_id else False
-
-        for pos in fposition_id.account_ids:
-            if not self._applies_to_mapping(product, pos):
-                continue
-            if pos.account_src_id.id == account_id:
-                account_id = pos.account_dest_id.id
-                break
-        return account_id
-
+"""
     @api.v8
     def map_account(self, account):
         product_id = self.env.context.get('product', False)
@@ -134,34 +115,6 @@ class FiscalPosition(models.Model):
             if pos.account_src_id == account:
                 return pos.account_dest_id
         return account
-
-    @api.v7
-    def map_tax(self, cr, uid, fposition_id, taxes, context=None):
-        if not taxes:
-            return []
-        if not fposition_id:
-            return map(lambda x: x.id, taxes)
-        if context is None:
-            context = {}
-
-        product_id = context.get('product', False)
-        product = self.pool.get('product.product')\
-            .browse(cr, uid, product_id, context) \
-            if product_id else False
-
-        result = set()
-        for t in taxes:
-            ok = False
-            for tax in fposition_id.tax_ids:
-                if not self._applies_to_mapping(product, tax):
-                    continue
-                if tax.tax_src_id.id == t.id:
-                    if tax.tax_dest_id:
-                        result.add(tax.tax_dest_id.id)
-                    ok = True
-            if not ok:
-                result.add(t.id)
-        return list(result)
 
     @api.v8
     def map_tax(self, taxes):
@@ -183,6 +136,7 @@ class FiscalPosition(models.Model):
             if not tax_count:
                 result |= tax
         return result
+"""
 
 
 class AccountFiscalPositionTemplate(models.Model):
