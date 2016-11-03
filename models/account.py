@@ -17,7 +17,7 @@
 #    <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from openerp import api, fields, models
+from odoo import api, fields, models
 
 
 class FiscalPositionAccount(models.Model):
