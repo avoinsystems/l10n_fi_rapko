@@ -308,7 +308,7 @@
             <field name="type_tax_use">purchase</field>
         </record>
         <record id="purchase_vat24_services" model="account.tax.template">
-            <field name="sequence">40</field>
+            <field name="sequence">41</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="name">Purchase VAT 24 %, Services</field>
             <field name="description">VAT 24 %</field>
