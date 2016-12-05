@@ -1927,14 +1927,14 @@
         </record>
         <record model="account.account.template" id="a1761">
             <field name="code">1761</field>
-            <field name="user_type_id" ref="account.data_account_type_receivable"/>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="reconcile" eval="True"/>
             <field name="name">Verotilisaamiset</field>
         </record>
         <record model="account.account.template" id="a1762">
             <field name="code">1762</field>
-            <field name="user_type_id" ref="account.data_account_type_receivable"/>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="reconcile" eval="True"/>
             <field name="name">Alv-saaminen</field>
@@ -3173,84 +3173,84 @@
         </record>
         <record model="account.account.template" id="a291140">
             <field name="code">291140</field>
-            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="reconcile" eval="True"/>
             <field name="name">Arvonlis&#228;verovelka</field>
         </record>
         <record model="account.account.template" id="a291141">
             <field name="code">291141</field>
-            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="reconcile" eval="True"/>
             <field name="name">24 Myynnin alv-velka</field>
         </record>
         <record model="account.account.template" id="a291142">
             <field name="code">291142</field>
-            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="reconcile" eval="True"/>
             <field name="name">14 Myynnin alv-velka</field>
         </record>
         <record model="account.account.template" id="a291143">
             <field name="code">291143</field>
-            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="reconcile" eval="True"/>
             <field name="name">10 Myynnin alv-velka</field>
         </record>
         <record model="account.account.template" id="a291145">
             <field name="code">291145</field>
-            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="reconcile" eval="True"/>
             <field name="name">Vero tavaraostoista muista EU-maista</field>
         </record>
         <record model="account.account.template" id="a291146">
             <field name="code">291146</field>
-            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="reconcile" eval="True"/>
             <field name="name">Vero palveluostoista muista EU-maista</field>
         </record>
         <record model="account.account.template" id="a291148">
             <field name="code">291148</field>
-            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="reconcile" eval="True"/>
             <field name="name">Vero rakentamispalvelun ostoista (k&#228;&#228;nnetty verovelvollisuus)</field>
         </record>
         <record model="account.account.template" id="a291151">
             <field name="code">291151</field>
-            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="reconcile" eval="True"/>
             <field name="name">V&#228;hennett&#228;v&#228; alv</field>
         </record>
         <record model="account.account.template" id="a291158">
             <field name="code">291158</field>
-            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="reconcile" eval="True"/>
             <field name="name">Muu 100 % v&#228;hennett&#228;v&#228; alv</field>
         </record>
         <record model="account.account.template" id="a291159">
             <field name="code">291159</field>
-            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="reconcile" eval="True"/>
             <field name="name">Tuonnin alv</field>
         </record>
         <record model="account.account.template" id="a291160">
             <field name="code">291160</field>
-            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="reconcile" eval="True"/>
             <field name="name">Verotilivelka</field>
         </record>
         <record model="account.account.template" id="a291161">
             <field name="code">291161</field>
-            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="reconcile" eval="True"/>
             <field name="name">Verotililt&#228; perint&#228;&#228;n siirretyt velat</field>
