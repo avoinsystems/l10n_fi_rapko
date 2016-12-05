@@ -40,14 +40,12 @@
         "account",
     ],
     "data": [
-        "data/account_chart_template.xml",
+        "data/account_chart_template_pre.xml",  # 1st
         "data/accounts.xml",
         "data/tax_tags.xml",
         "data/taxes.xml",
         "data/fiscal_positions.xml",
-        "data/account_chart_template.yml",
-        "views/fiscal_position.xml",
-        "views/invoice.xml",
+        "data/account_chart_template_post.xml",  # 2nd last
         "data/account_chart_template.yml",  # Load / evaluate this last
     ],
     "active": False,

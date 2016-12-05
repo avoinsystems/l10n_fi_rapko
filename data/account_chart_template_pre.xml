@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<odoo>
     <data>
 
         <menuitem id="account_reports_fi_rapko_statements_menu"
@@ -28,4 +28,4 @@
         </record>
 
     </data>
-</openerp>
+</odoo>

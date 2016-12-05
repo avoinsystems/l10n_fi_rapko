@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<odoo>
     <data>
         <record id="sales_vat_ic_services" model="account.tax.template">
             <field name="sequence">140</field>
@@ -237,120 +237,180 @@
                    eval="[(6,0,[ref('purchase_vat_ic_goods_24_carry'),ref('purchase_vat_ic_goods_24_deduct')])]"/>
             <field name="type_tax_use">purchase</field>
         </record>
-        <record id="purchase_vat10" model="account.tax.template">
+
+
+        <!-- Domestic taxes -->
+        <record id="purchase_vat10_goods" model="account.tax.template">
             <field name="sequence">60</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="name">Purchase VAT 10 %</field>
+            <field name="name">Purchase VAT 10 %, Goods</field>
+            <field name="description">VAT 10 %</field>
             <field name="amount">10.0</field>
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a1762"/>
             <field name="refund_account_id" ref="a1762"/>
             <field name="tag_ids"
-                   eval="[(6,0,[ref('tax_code_deductible_tag'),ref('tax_code_pay_deduct_tag')])]"/>
+                   eval="[(6,0,[ref('tax_code_deductible_tag'),ref('tax_code_pay_deduct_tag'),ref('tax_tag_goods')])]"/>
             <field name="type_tax_use">purchase</field>
         </record>
-        <record id="purchase_vat14" model="account.tax.template">
+        <record id="purchase_vat10_services" model="account.tax.template">
+            <field name="sequence">61</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="name">Purchase VAT 10 %, Services</field>
+            <field name="description">VAT 10 %</field>
+            <field name="amount">10.0</field>
+            <field name="amount_type">percent</field>
+            <field name="account_id" ref="a1762"/>
+            <field name="refund_account_id" ref="a1762"/>
+            <field name="tag_ids"
+                   eval="[(6,0,[ref('tax_code_deductible_tag'),ref('tax_code_pay_deduct_tag'),ref('tax_tag_services')])]"/>
+            <field name="type_tax_use">purchase</field>
+        </record>
+
+        <record id="purchase_vat14_goods" model="account.tax.template">
             <field name="sequence">50</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="name">Purchase VAT 14 %</field>
+            <field name="name">Purchase VAT 14 %, Goods</field>
+            <field name="description">VAT 14 %</field>
             <field name="amount">14.0</field>
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a1762"/>
             <field name="refund_account_id" ref="a1762"/>
             <field name="tag_ids"
-                   eval="[(6,0,[ref('tax_code_deductible_tag'),ref('tax_code_pay_deduct_tag')])]"/>
+                   eval="[(6,0,[ref('tax_code_deductible_tag'),ref('tax_code_pay_deduct_tag'),ref('tax_tag_goods')])]"/>
             <field name="type_tax_use">purchase</field>
         </record>
-        <record id="purchase_vat24" model="account.tax.template">
+        <record id="purchase_vat14_services" model="account.tax.template">
+            <field name="sequence">51</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="name">Purchase VAT 14 %, Services</field>
+            <field name="description">VAT 14 %</field>
+            <field name="amount">14.0</field>
+            <field name="amount_type">percent</field>
+            <field name="account_id" ref="a1762"/>
+            <field name="refund_account_id" ref="a1762"/>
+            <field name="tag_ids"
+                   eval="[(6,0,[ref('tax_code_deductible_tag'),ref('tax_code_pay_deduct_tag'),ref('tax_tag_services')])]"/>
+            <field name="type_tax_use">purchase</field>
+        </record>
+
+        <record id="purchase_vat24_goods" model="account.tax.template">
             <field name="sequence">40</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="name">Purchase VAT 24 %</field>
+            <field name="name">Purchase VAT 24 %, Goods</field>
+            <field name="description">VAT 24 %</field>
             <field name="amount">24.0</field>
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a1762"/>
             <field name="refund_account_id" ref="a1762"/>
             <field name="tag_ids"
-                   eval="[(6,0,[ref('tax_code_deductible_tag'),ref('tax_code_pay_deduct_tag')])]"/>
+                   eval="[(6,0,[ref('tax_code_deductible_tag'),ref('tax_code_pay_deduct_tag'),ref('tax_tag_goods')])]"/>
             <field name="type_tax_use">purchase</field>
         </record>
+        <record id="purchase_vat24_services" model="account.tax.template">
+            <field name="sequence">40</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="name">Purchase VAT 24 %, Services</field>
+            <field name="description">VAT 24 %</field>
+            <field name="amount">24.0</field>
+            <field name="amount_type">percent</field>
+            <field name="account_id" ref="a1762"/>
+            <field name="refund_account_id" ref="a1762"/>
+            <field name="tag_ids"
+                   eval="[(6,0,[ref('tax_code_deductible_tag'),ref('tax_code_pay_deduct_tag'),ref('tax_tag_services')])]"/>
+            <field name="type_tax_use">purchase</field>
+        </record>
+
         <record id="sales_vat_non_ic" model="account.tax.template">
             <field name="sequence">34</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="name">VAT 0 % Export</field>
+            <field name="name">VAT 0 %</field>
+            <field name="description">VAT 0 %</field>
             <field name="amount_type">fixed</field>
             <field name="amount">0</field>
             <field name="tag_ids" eval="[(6,0,[ref('tax_code_vat0_tag')])]"/>
             <field name="type_tax_use">sale</field>
         </record>
-        <record id="sales_vat10_incl" model="account.tax.template">
-            <field name="sequence">31</field>
-            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="name">VAT 10 % (incl)</field>
-            <field name="amount">10.0</field>
-            <field name="amount_type">percent</field>
-            <field name="account_id" ref="a291143"/>
-            <field name="refund_account_id" ref="a291143"/>
-            <field name="tag_ids" eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_taxes_sale_10_tag')])]"/>
-            <field name="type_tax_use">sale</field>
-            <field name="price_include">true</field>
-        </record>
-        <record id="sales_vat10" model="account.tax.template">
+
+        <record id="sales_vat10_goods" model="account.tax.template">
             <field name="sequence">30</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="name">VAT 10 %</field>
+            <field name="name">VAT 10 %, Goods</field>
+            <field name="description">VAT 10 %</field>
             <field name="amount">10.0</field>
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a291143"/>
             <field name="refund_account_id" ref="a291143"/>
-            <field name="tag_ids" eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_taxes_sale_10_tag')])]"/>
+            <field name="tag_ids"
+                   eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_taxes_sale_10_tag'),ref('tax_tag_goods')])]"/>
+            <field name="type_tax_use">sale</field>
+        </record>
+        <record id="sales_vat10_services" model="account.tax.template">
+            <field name="sequence">31</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="name">VAT 10 %, Services</field>
+            <field name="description">VAT 10 %</field>
+            <field name="amount">10.0</field>
+            <field name="amount_type">percent</field>
+            <field name="account_id" ref="a291143"/>
+            <field name="refund_account_id" ref="a291143"/>
+            <field name="tag_ids"
+                   eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_taxes_sale_10_tag'),ref('tax_tag_services')])]"/>
             <field name="type_tax_use">sale</field>
         </record>
 
-        <record id="sales_vat14_incl" model="account.tax.template">
-            <field name="sequence">21</field>
-            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="name">VAT 14 % (incl)</field>
-            <field name="amount">14.0</field>
-            <field name="amount_type">percent</field>
-            <field name="account_id" ref="a291142"/>
-            <field name="refund_account_id" ref="a291142"/>
-            <field name="tag_ids" eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_taxes_sale_14_tag')])]"/>
-            <field name="type_tax_use">sale</field>
-            <field name="price_include">true</field>
-        </record>
-        <record id="sales_vat14" model="account.tax.template">
+        <record id="sales_vat14_goods" model="account.tax.template">
             <field name="sequence">20</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="name">VAT 14 %</field>
+            <field name="name">VAT 14 %, Goods</field>
+            <field name="description">VAT 14 %</field>
             <field name="amount">14.0</field>
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a291142"/>
             <field name="refund_account_id" ref="a291142"/>
-            <field name="tag_ids" eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_taxes_sale_14_tag')])]"/>
+            <field name="tag_ids"
+                   eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_taxes_sale_14_tag'),ref('tax_tag_goods')])]"/>
             <field name="type_tax_use">sale</field>
         </record>
-        <record id="sales_vat24_incl" model="account.tax.template">
-            <field name="sequence">11</field>
+        <record id="sales_vat14_services" model="account.tax.template">
+            <field name="sequence">21</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="name">VAT 24 % (incl)</field>
-            <field name="amount">24.0</field>
+            <field name="name">VAT 14 %, Services</field>
+            <field name="description">VAT 14 %</field>
+            <field name="amount">14.0</field>
             <field name="amount_type">percent</field>
-            <field name="account_id" ref="a291141"/>
-            <field name="refund_account_id" ref="a291141"/>
-            <field name="tag_ids" eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_taxes_sale_24_tag')])]"/>
+            <field name="account_id" ref="a291142"/>
+            <field name="refund_account_id" ref="a291142"/>
+            <field name="tag_ids"
+                   eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_taxes_sale_14_tag'),ref('tax_tag_services')])]"/>
             <field name="type_tax_use">sale</field>
-            <field name="price_include">true</field>
         </record>
-        <record id="sales_vat24" model="account.tax.template">
+
+        <record id="sales_vat24_goods" model="account.tax.template">
             <field name="sequence">10</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="name">VAT 24 %</field>
+            <field name="name">VAT 24 %, Goods</field>
+            <field name="description">VAT 24 %</field>
             <field name="amount">24.0</field>
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a291141"/>
             <field name="refund_account_id" ref="a291141"/>
-            <field name="tag_ids" eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_taxes_sale_24_tag')])]"/>
+            <field name="tag_ids"
+                   eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_taxes_sale_24_tag'),ref('tax_tag_goods')])]"/>
+            <field name="type_tax_use">sale</field>
+        </record>
+        <record id="sales_vat24_services" model="account.tax.template">
+            <field name="sequence">11</field>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="name">VAT 24 %, Services</field>
+            <field name="description">VAT 24 %</field>
+            <field name="amount">24.0</field>
+            <field name="amount_type">percent</field>
+            <field name="account_id" ref="a291141"/>
+            <field name="refund_account_id" ref="a291141"/>
+            <field name="tag_ids"
+                   eval="[(6,0,[ref('tax_code_pay_deduct_tag'),ref('tax_code_taxes_sale_24_tag'),ref('tax_tag_services')])]"/>
             <field name="type_tax_use">sale</field>
         </record>
     </data>
-</openerp>
+</odoo>
