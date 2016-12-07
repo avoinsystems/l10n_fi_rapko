@@ -1,4 +1,4 @@
-<openerp>
+<odoo>
     <data noupdate="1">
         <record model="account.account.template" id="a10002">
             <field name="code">10002</field>
@@ -1927,7 +1927,7 @@
         </record>
         <record model="account.account.template" id="a1761">
             <field name="code">1761</field>
-            <field name="user_type_id" ref="account.data_account_type_receivable"/>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="reconcile" eval="True"/>
             <field name="name">Verotilisaamiset</field>
@@ -2079,15 +2079,6 @@
             <field name="reconcile" eval="True"/>
             <field name="name">Muut pankkisaamiset</field>
         </record>
-        <!-- Siirretty -> account_chart.xml
-        <record model="account.account.template" id="a19190">
-            <field name="code">19190</field>
-            <field name="user_type_id" ref="account.data_account_type_receivable"/>
-            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="reconcile" eval="True"/>
-            <field name="name">Rahansiirrot/ v&#228;litilit/ t&#228;sm&#228;ytykset</field>
-        </record>
-        -->
         <record model="account.account.template" id="a20000">
             <field name="code">20000</field>
             <field name="user_type_id" ref="account.data_account_type_equity"/>
@@ -3182,7 +3173,7 @@
         </record>
         <record model="account.account.template" id="a291140">
             <field name="code">291140</field>
-            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="reconcile" eval="True"/>
             <field name="name">Arvonlis&#228;verovelka</field>
@@ -3224,7 +3215,7 @@
         </record>
         <record model="account.account.template" id="a291148">
             <field name="code">291148</field>
-            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="reconcile" eval="True"/>
             <field name="name">Vero rakentamispalvelun ostoista (k&#228;&#228;nnetty verovelvollisuus)</field>
@@ -3238,28 +3229,28 @@
         </record>
         <record model="account.account.template" id="a291158">
             <field name="code">291158</field>
-            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="reconcile" eval="True"/>
             <field name="name">Muu 100 % v&#228;hennett&#228;v&#228; alv</field>
         </record>
         <record model="account.account.template" id="a291159">
             <field name="code">291159</field>
-            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="reconcile" eval="True"/>
             <field name="name">Tuonnin alv</field>
         </record>
         <record model="account.account.template" id="a291160">
             <field name="code">291160</field>
-            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="reconcile" eval="True"/>
             <field name="name">Verotilivelka</field>
         </record>
         <record model="account.account.template" id="a291161">
             <field name="code">291161</field>
-            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="reconcile" eval="True"/>
             <field name="name">Verotililt&#228; perint&#228;&#228;n siirretyt velat</field>
@@ -3305,6 +3296,13 @@
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="reconcile" eval="False"/>
             <field name="name">Myynti</field>
+        </record>
+        <record model="account.account.template" id="a300000p">
+            <field name="code">300000p</field>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="reconcile" eval="False"/>
+            <field name="name">Palvelumyynti</field>
         </record>
         <record model="account.account.template" id="a300100">
             <field name="code">300100</field>
@@ -3649,6 +3647,13 @@
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="reconcile" eval="False"/>
             <field name="name">Ostot</field>
+        </record>
+        <record model="account.account.template" id="a4000p">
+            <field name="code">4000p</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="chart_template_id" ref="chart_template_fi_rapko"/>
+            <field name="reconcile" eval="False"/>
+            <field name="name">Palveluostot</field>
         </record>
         <record model="account.account.template" id="a40001">
             <field name="code">40001</field>
@@ -5387,17 +5392,6 @@
             <field name="reconcile" eval="False"/>
             <field name="name">Perustamismenot /ei nettovarallisuutta</field>
         </record>
-        <!-- Configure chart template account ids -->
-        <record id="chart_template_fi_rapko" model="account.chart.template">
-            <field name="property_account_receivable_id" ref="a1700"/>
-            <field name="property_account_payable_id" ref="a29060"/>
-            <field name="property_account_expense_categ_id" ref="a4000"/>
-            <field name="property_account_income_categ_id" ref="a300000"/>
-            <field name="property_stock_account_input_categ_id" ref="a4070"/>
-            <field name="property_stock_account_output_categ_id" ref="a4070"/>
-            <field name="property_stock_valuation_account_id" ref="a4070"/>
-            <field name="expense_currency_exchange_account_id" ref="a4000"/>
-            <field name="income_currency_exchange_account_id" ref="a300000"/>
-        </record>
+
     </data>
-</openerp>
+</odoo>

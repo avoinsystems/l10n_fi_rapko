@@ -1,31 +1,21 @@
-# -*- encoding: utf-8 -*-
+# coding=utf-8
+# Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-##############################################################################
-#
-#    Copyright (C) 2014- Avoin.Systems (<http://avoin.systems>).
-#    Copyright (C) 2014- RockIt Oy (<http://rockit.fi>).
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#    <http://www.gnu.org/licenses/>.
-#
-##############################################################################
+# Copyright (C) RockIT Oy 2014-
+# Copyright (C) Avoin.Systems 2014-
+# Authors:
+#   Miku Laitinen (Avoin.Systems)
+#   Mikko Närjänen (Avoin.Systems)
+#   Toni Pesola (Avoin.Systems)
+#   Mikko Salmela (RockIT Oy)
 
 # noinspection PyStatementEffect
 {
     "name": "Finland - Accounting (Raportointikoodisto)",
     "category": "Localization",
     "version": "1.0.0",
-    "license": "AGPL-3",
     "description": """
-    Finnish chart of accounts and value added taxes.
+    Finnish chart of accounts, value added taxes and useful new fields.
 
     Standard Business Reporting (=SBR or Raportointikoodisto) is a standard code set
     making Finnish official reporting easier by supplementing the common chart of accounts.
@@ -35,21 +25,20 @@
     Finnish regulations for accounting: http://www.finlex.fi/fi/laki/ajantasa/1997/19971339
     """,
     "author": "RockIt Oy & Avoin.Systems",
-    "website": "https://github.com/avoinsystems/l10n_fi_rapko",
     "depends": [
         "account",
     ],
     "data": [
-        "data/account_chart_template.xml",
+        "data/account_chart_template_pre.xml",  # 1st
         "data/accounts.xml",
         "data/tax_tags.xml",
         "data/taxes.xml",
         "data/fiscal_positions.xml",
-        "data/account_chart_template.yml",
-        "views/fiscal_position.xml",
-        "views/invoice.xml",
+        "data/account_chart_template_post.xml",  # 2nd last
         "data/account_chart_template.yml",  # Load / evaluate this last
+        "views/account_invoice.xml",
+        "views/res_config.xml",
+        "views/res_partner.xml",
     ],
-    "active": False,
     "installable": True,
 }
