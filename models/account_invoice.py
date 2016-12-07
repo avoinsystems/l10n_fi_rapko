@@ -3,8 +3,8 @@
 
 # Copyright (C) Avoin.Systems 2016
 import re
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
+from openerp import api, fields, models, _
+from openerp.exceptions import UserError
 import logging
 
 log = logging.getLogger(__name__)

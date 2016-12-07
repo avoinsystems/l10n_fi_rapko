@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 # Copyright (C) Avoin.Systems 2016
-from odoo import api, fields, models
+from openerp import api, fields, models
 
 
 class FinnishCompany(models.Model):

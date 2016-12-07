@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 import unittest
-from odoo.exceptions import UserError
+from openerp.exceptions import UserError
 # noinspection PyUnresolvedReferences
-from odoo.addons.l10n_fi.models.account_invoice \
+from openerp.addons.l10n_fi.models.account_invoice \
     import compute_payment_reference_fi, compute_payment_reference_rf
 
 

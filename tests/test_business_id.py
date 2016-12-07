@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 import unittest
-from odoo.exceptions import ValidationError
+from openerp.exceptions import ValidationError
 # noinspection PyUnresolvedReferences
-from odoo.addons.l10n_fi.models.res_partner import check_business_id
+from openerp.addons.l10n_fi.models.res_partner import check_business_id
 
 
 class BusinessIDTest(unittest.TestCase):

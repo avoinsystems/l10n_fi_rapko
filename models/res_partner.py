@@ -3,8 +3,8 @@
 
 # Copyright (C) Avoin.Systems 2016
 
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
+from openerp import api, fields, models, _
+from openerp.exceptions import ValidationError
 
 
 def check_business_id(business_id):
