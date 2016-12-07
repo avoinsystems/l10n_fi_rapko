@@ -4,7 +4,7 @@
         <record id="sales_vat_ic_services" model="account.tax.template">
             <field name="sequence">140</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="description">YPM 0 %</field>
+            <field name="description">VAT 0 % Reverse Charge, Services</field>
             <field name="name">VAT 0 %, Services (Intra-Community Supply)</field>
             <field name="amount_type">fixed</field>
             <field name="amount">0</field>
@@ -14,7 +14,7 @@
         <record id="sales_vat_ic_goods" model="account.tax.template">
             <field name="sequence">130</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="description">YTM 0 %</field>
+            <field name="description">VAT 0 % Reverse Charge, Services</field>
             <field name="name">VAT 0 %, Goods (Intra-Community Supply)</field>
             <field name="amount_type">fixed</field>
             <field name="amount">0</field>
@@ -24,7 +24,6 @@
         <record id="purchase_vat_ic_services_10_deduct" model="account.tax.template">
             <field name="sequence">222</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="description">YPO 10 %, deduct</field>
             <field name="name">VAT 10 %, Services - deduct</field>
             <field name="amount_type">percent</field>
             <field name="amount">10.0</field>
@@ -36,7 +35,6 @@
         <record id="purchase_vat_ic_services_10_carry" model="account.tax.template">
             <field name="sequence">121</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="description">YPO 10 %, carry</field>
             <field name="name">VAT 10 %, Services - carry out</field>
             <field name="amount_type">percent</field>
             <field name="amount">-10.0</field>
@@ -49,8 +47,8 @@
         <record id="purchase_vat_ic_services_10" model="account.tax.template">
             <field name="sequence">120</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="description">YPO 10 %</field>
-            <field name="name">VAT 10 %, Services</field>
+            <field name="description">VAT 10 % Reverse Charge, Services</field>
+            <field name="name">Purchase VAT 10 % Reverse Charge, Services</field>
             <field name="amount_type">group</field>
             <field name="amount">1</field>
             <field name="children_tax_ids"
@@ -60,7 +58,6 @@
         <record id="purchase_vat_ic_services_14_deduct" model="account.tax.template">
             <field name="sequence">212</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="description">YPO 14 %, deduct</field>
             <field name="name">VAT 14 %, Services - deduct</field>
             <field name="amount_type">percent</field>
             <field name="amount">14.0</field>
@@ -72,7 +69,6 @@
         <record id="purchase_vat_ic_services_14_carry" model="account.tax.template">
             <field name="sequence">111</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="description">YPO 14 %, carry</field>
             <field name="name">VAT 14 %, Services - carry out</field>
             <field name="amount_type">percent</field>
             <field name="amount">-14.0</field>
@@ -85,8 +81,8 @@
         <record id="purchase_vat_ic_services_14" model="account.tax.template">
             <field name="sequence">110</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="description">YPO 14 %</field>
-            <field name="name">VAT 14 %, Services</field>
+            <field name="description">VAT 14 % Reverse Charge, Services</field>
+            <field name="name">Purchase VAT 14 % Reverse Charge, Services</field>
             <field name="amount_type">group</field>
             <field name="amount">1</field>
             <field name="children_tax_ids"
@@ -96,7 +92,6 @@
         <record id="purchase_vat_ic_services_24_deduct" model="account.tax.template">
             <field name="sequence">202</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="description">YPO 24 %, deduct</field>
             <field name="name">VAT 24 %, Services - deduct</field>
             <field name="amount_type">percent</field>
             <field name="amount">24.0</field>
@@ -108,7 +103,6 @@
         <record id="purchase_vat_ic_services_24_carry" model="account.tax.template">
             <field name="sequence">101</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="description">YPO 24 %, carry</field>
             <field name="name">VAT 24 %, Services - carry out</field>
             <field name="amount_type">percent</field>
             <field name="amount">-24.0</field>
@@ -121,8 +115,8 @@
                 <record id="purchase_vat_ic_services_24" model="account.tax.template">
             <field name="sequence">100</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="description">YPO 24 %</field>
-            <field name="name">VAT 24 %, Services</field>
+            <field name="description">VAT 24 % Reverse Charge, Services</field>
+            <field name="name">Purchase VAT 24 % Reverse Charge, Services</field>
             <field name="amount_type">group</field>
             <field name="amount">1</field>
             <field name="children_tax_ids"
@@ -132,7 +126,6 @@
         <record id="purchase_vat_ic_goods_10_deduct" model="account.tax.template">
             <field name="sequence">192</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="description">YTO 10 %, deduct</field>
             <field name="name">VAT 10 %, Goods - deduct</field>
             <field name="amount_type">percent</field>
             <field name="amount">10.0</field>
@@ -144,7 +137,6 @@
         <record id="purchase_vat_ic_goods_10_carry" model="account.tax.template">
             <field name="sequence">91</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="description">YTO 10 %, carry</field>
             <field name="name">VAT 10 %, Goods - carry out</field>
             <field name="amount_type">percent</field>
             <field name="amount">-10.0</field>
@@ -157,8 +149,8 @@
         <record id="purchase_vat_ic_goods_10" model="account.tax.template">
             <field name="sequence">90</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="description">YTO 10 %</field>
-            <field name="name">VAT 10 %, Goods</field>
+            <field name="description">VAT 10 % Reverse Charge, Goods</field>
+            <field name="name">Purchase VAT 10 % Reverse Charge, Goods</field>
             <field name="amount_type">group</field>
             <field name="amount">1</field>
             <field name="children_tax_ids"
@@ -168,7 +160,6 @@
         <record id="purchase_vat_ic_goods_14_deduct" model="account.tax.template">
             <field name="sequence">182</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="description">YTO 14 %, deduct</field>
             <field name="name">VAT 14 %, Goods - deduct</field>
             <field name="amount_type">percent</field>
             <field name="amount">14.0</field>
@@ -180,7 +171,6 @@
         <record id="purchase_vat_ic_goods_14_carry" model="account.tax.template">
             <field name="sequence">81</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="description">YTO 14 %, carry</field>
             <field name="name">VAT 14 %, Goods - carry out</field>
             <field name="amount_type">percent</field>
             <field name="amount">-14.0</field>
@@ -193,8 +183,8 @@
         <record id="purchase_vat_ic_goods_14" model="account.tax.template">
             <field name="sequence">80</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="description">YTO 14 %</field>
-            <field name="name">VAT 14 %, Goods</field>
+            <field name="description">VAT 14 % Reverse Charge, Goods</field>
+            <field name="name">Purchase VAT 14 % Reverse Charge, Goods</field>
             <field name="amount_type">group</field>
             <field name="amount">1</field>
             <field name="children_tax_ids"
@@ -204,7 +194,6 @@
         <record id="purchase_vat_ic_goods_24_deduct" model="account.tax.template">
             <field name="sequence">172</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="description">YTO 24 %, deduct</field>
             <field name="name">VAT 24 %, Goods - deduct</field>
             <field name="amount_type">percent</field>
             <field name="amount">24.0</field>
@@ -216,7 +205,6 @@
         <record id="purchase_vat_ic_goods_24_carry" model="account.tax.template">
             <field name="sequence">71</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="description">YTO 24 %, carry</field>
             <field name="name">VAT 24 %, Goods - carry out</field>
             <field name="amount_type">percent</field>
             <field name="amount">-24.0</field>
@@ -229,8 +217,8 @@
         <record id="purchase_vat_ic_goods_24" model="account.tax.template">
             <field name="sequence">70</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
-            <field name="description">YTO 24 %</field>
-            <field name="name">VAT 24 %, Goods</field>
+            <field name="description">VAT 24 % Reverse Charge, Goods</field>
+            <field name="name">Purchase VAT 24 % Reverse Charge, Goods</field>
             <field name="amount_type">group</field>
             <field name="amount">1</field>
             <field name="children_tax_ids"
@@ -244,7 +232,7 @@
             <field name="sequence">60</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="name">Purchase VAT 10 %, Goods</field>
-            <field name="description">VAT 10 %</field>
+            <field name="description">VAT 10 %, Goods</field>
             <field name="amount">10.0</field>
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a1762"/>
@@ -257,7 +245,7 @@
             <field name="sequence">61</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="name">Purchase VAT 10 %, Services</field>
-            <field name="description">VAT 10 %</field>
+            <field name="description">VAT 10 %, Services</field>
             <field name="amount">10.0</field>
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a1762"/>
@@ -271,7 +259,7 @@
             <field name="sequence">50</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="name">Purchase VAT 14 %, Goods</field>
-            <field name="description">VAT 14 %</field>
+            <field name="description">VAT 14 %, Goods</field>
             <field name="amount">14.0</field>
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a1762"/>
@@ -284,7 +272,7 @@
             <field name="sequence">51</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="name">Purchase VAT 14 %, Services</field>
-            <field name="description">VAT 14 %</field>
+            <field name="description">VAT 14 %, Services</field>
             <field name="amount">14.0</field>
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a1762"/>
@@ -298,7 +286,7 @@
             <field name="sequence">40</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="name">Purchase VAT 24 %, Goods</field>
-            <field name="description">VAT 24 %</field>
+            <field name="description">VAT 24 %, Goods</field>
             <field name="amount">24.0</field>
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a1762"/>
@@ -311,7 +299,7 @@
             <field name="sequence">41</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="name">Purchase VAT 24 %, Services</field>
-            <field name="description">VAT 24 %</field>
+            <field name="description">VAT 24 %, Services</field>
             <field name="amount">24.0</field>
             <field name="amount_type">percent</field>
             <field name="account_id" ref="a1762"/>
@@ -325,7 +313,6 @@
             <field name="sequence">34</field>
             <field name="chart_template_id" ref="chart_template_fi_rapko"/>
             <field name="name">VAT 0 %</field>
-            <field name="description">VAT 0 %</field>
             <field name="amount_type">fixed</field>
             <field name="amount">0</field>
             <field name="tag_ids" eval="[(6,0,[ref('tax_code_vat0_tag')])]"/>
